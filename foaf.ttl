@@ -31,4 +31,5 @@
    social:hasSpiritAnimal dbr:Komodo_dragon ;
    social:hasFavouritePlatonicSolid dbr:Dodecahedron ;
    foaf:birthday "2000-02-04"^^xsd:date ;
+   foaf:gender "male" ;
    foaf:myersBriggs "ISFP" .
