@@ -24,7 +24,7 @@
    foaf:familyName "Cerda" ;
    foaf:age 22 ;
    foaf:img <https://external-preview.redd.it/ne5PmPBUsCZJaAy8pk_-IRWxHXLqvfsKWc-vOTKIsts.png?auto=webp&s=e0e157fec6c332798447c8cdb29ea58090ef6c73> ;
-   foaf:knows <https://users.dcc.uchile.cl/~ahogan/foaf.ttl#ah> , <https://raw.githubusercontent.com/mApachx/Watos/main/foaf.ttl#sf>, <https://raw.githubusercontent.com/Zelcris/lab9-Web-of-Data/main/foaf_cpirira.ttl#cpirira>;
+   foaf:knows <https://users.dcc.uchile.cl/~ahogan/foaf.ttl#ah> , <https://raw.githubusercontent.com/mApachx/Watos/main/foaf.ttl#sf>, <https://raw.githubusercontent.com/Zelcris/lab9-Web-of-Data/main/foaf_cpirira.ttl#cpirira>, <http://anakena.dcc.uchile.cl/~jasalas/web/foaf.ttl#me> ;
    foaf:interest dbr:Semantic_Web , dbr:Technology , dbr:History ; 
    social:hasEnemy <http://users.dcc.uchile.cl/~ahogan/abot.ttl#ab> ;
    social:likesMovie dbr:Inglourious_Basterds , dbr:Shrek_2 , dbr:Spirited_Away ;
