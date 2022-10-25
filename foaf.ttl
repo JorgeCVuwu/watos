@@ -27,7 +27,7 @@
    foaf:knows <https://users.dcc.uchile.cl/~ahogan/foaf.ttl#ah> , <https://raw.githubusercontent.com/mApachx/Watos/main/foaf.ttl#sf>, <https://raw.githubusercontent.com/Zelcris/lab9-Web-of-Data/main/foaf_cpirira.ttl#cpirira>;
    foaf:interest dbr:Semantic_Web , dbr:Technology , dbr:History ; 
    social:hasEnemy <http://users.dcc.uchile.cl/~ahogan/abot.ttl#ab> ;
-   social:likesMovie dbr:Inglourious_Basterds ,  dbr:Harry_Potter_and_the_Prisoner_of_Azkaban_(film) , dbr:1917_(2019_film) ;
+   social:likesMovie dbr:Inglourious_Basterds , dbr:Harry_Potter_and_the_Prisoner_of_Azkaban_(film) , dbr:1917_(2019_film) ;
    social:hasSpiritAnimal dbr:Komodo_dragon ;
    social:hasFavouritePlatonicSolid dbr:Dodecahedron ;
    foaf:birthday "2000-02-04"^^xsd:date ;
