@@ -1,0 +1,1870 @@
+@base          <file:///C:/Users/jorge/OneDrive/Escritorio/tarql-1.2/bin/unit.sparql> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:  <http://ex.org/a#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<http://ex.org/units/Archer>
+        rdf:type          ex:Unit ;
+        ex:name           "Archer" ;
+        ex:description    "Quick and light. Weak at close range; excels at battle from distance" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Wood\": 25;\"Gold\": 45}" ;
+        ex:build_time     35 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.35"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     4 ;
+        ex:range          30 ;
+        ex:attack         4 ;
+        ex:armor          "0/0" ;
+        ex:accuracy       "80%" .
+
+<http://ex.org/units/Crossbowman>
+        rdf:type          ex:Unit ;
+        ex:name           "Crossbowman" ;
+        ex:description    "Upgraded archer" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Wood\": 25;\"Gold\": 45}" ;
+        ex:build_time     27 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.35"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     35 ;
+        ex:range          5 ;
+        ex:attack         5 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+3 spearmen" ;
+        ex:accuracy       "85%" .
+
+<http://ex.org/units/Arbalest>
+        rdf:type          ex:Unit ;
+        ex:name           "Arbalest" ;
+        ex:description    "Upgraded crossbowman" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Wood\": 25;\"Gold\": 45}" ;
+        ex:build_time     27 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.35"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     40 ;
+        ex:range          5 ;
+        ex:attack         6 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+3 spearmen" ;
+        ex:accuracy       "90%" .
+
+<http://ex.org/units/Cavalry_Archer>
+        rdf:type          ex:Unit ;
+        ex:name           "Cavalry_Archer" ;
+        ex:description    "Fast with ranged attack. Ideal for hit-and-run attacks" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Wood\": 40;\"Gold\": 70}" ;
+        ex:build_time     34 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "1"^^xsd:float ;
+        ex:movement_rate  "1.4"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     50 ;
+        ex:range          4 ;
+        ex:attack         6 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:search_radius  6 ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Heavy_Cavalry_Archer>
+        rdf:type          ex:Unit ;
+        ex:name           "Heavy_Cavalry_Archer" ;
+        ex:description    "Upgraded Cavalry Archer" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Wood\": 40;\"Gold\": 70}" ;
+        ex:build_time     27 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "1"^^xsd:float ;
+        ex:movement_rate  "1.4"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          4 ;
+        ex:attack         7 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Hand_Cannoneer>
+        rdf:type          ex:Unit ;
+        ex:name           "Hand_Cannoneer" ;
+        ex:description    "Powerful close attack; inaccurate at range. Attack bonus against spearman +11 in total" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Food\": 45;\"Gold\": 50}" ;
+        ex:build_time     34 ;
+        ex:attack_delay   "0.45"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     35 ;
+        ex:range          7 ;
+        ex:attack         17 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "1 spearmen;+10 infantry;+2 rams" ;
+        ex:accuracy       "65%" .
+
+<http://ex.org/units/Skirmisher>
+        rdf:type          ex:Unit ;
+        ex:name           "Skirmisher" ;
+        ex:description    "Ranged unit equipped with armor vs. archer attacks" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Food\": 25;\"Wood\": 35}" ;
+        ex:build_time     22 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0.5"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     30 ;
+        ex:attack         2 ;
+        ex:armor          "0/3" ;
+        ex:attack_bonus   "+3 spearmen;+3 archers/hand cannon/skirms/conquistadors" ;
+        ex:accuracy       "90%" .
+
+<http://ex.org/units/Elite_Skirmisher>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Skirmisher" ;
+        ex:description    "Upgraded skirmisher" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Archery Range" ;
+        ex:cost           "{\"Food\": 25;\"Wood\": 35}" ;
+        ex:build_time     22 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0.5"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     35 ;
+        ex:attack         3 ;
+        ex:armor          "0/4" ;
+        ex:attack_bonus   "+3 spearmen;+4 archers/hand cannon/skirms/conquistadors;+6 against cavalry archers" ;
+        ex:accuracy       "90%" .
+
+<http://ex.org/units/Eagle_Warrior>
+        rdf:type          ex:Unit ;
+        ex:name           "Eagle_Warrior" ;
+        ex:description    "Fast infantry with extensive sight; resists conversion; attack bonus vs. Monks" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"info\":\"1 Unit free at the start of the game for Aztecs and Mayans\"}" ;
+        ex:build_time     0 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.1"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         4 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+8 monks;+3 siege" ;
+        rdf:type          ex:Unit ;
+        ex:name           "Eagle_Warrior" ;
+        ex:description    "Fast infantry with extensive sight; resists conversion; attack bonus vs. Monks" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 20;\"Gold\": 50}" ;
+        ex:build_time     35 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.1"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+8 monks;+3 siege;+2 cavalry;+1 ship/camel" .
+
+<http://ex.org/units/Elite_Eagle_Warrior>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Eagle_Warrior" ;
+        ex:description    "Upgraded Eagle Warrior" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 20;\"Gold\": 50}" ;
+        ex:build_time     20 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.3"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         9 ;
+        ex:armor          "0/4" ;
+        ex:attack_bonus   "+10 monks;+5 siege;+4 cavalry;+2 ship/camel" .
+
+<http://ex.org/units/Spearman>
+        rdf:type          ex:Unit ;
+        ex:name           "Spearman" ;
+        ex:description    "Medium infantry" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 35;\"Wood\": 15}" ;
+        ex:build_time     22 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     45 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+1 eagles;+1 buildings;+30 war elephants;+15 cavalry;+7 camels/ships" .
+
+<http://ex.org/units/Pikeman>
+        rdf:type          ex:Unit ;
+        ex:name           "Pikeman" ;
+        ex:description    "Upgraded Spearman" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 35;\"Wood\": 25}" ;
+        ex:build_time     22 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     55 ;
+        ex:range          0 ;
+        ex:attack         4 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+1 eagles;+1 buildings;+47 war elephants;+22 cavalry;+11 camels/ships" .
+
+<http://ex.org/units/Halberdier>
+        rdf:type          ex:Unit ;
+        ex:name           "Halberdier" ;
+        ex:description    "Upgraded Pikeman" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 35;\"Wood\": 25}" ;
+        ex:build_time     22 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         6 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+1 eagles;+1 buildings;+60 war elephants;+32 cavalry;+16 camels/ships" .
+
+<http://ex.org/units/Militia>
+        rdf:type          ex:Unit ;
+        ex:name           "Militia" ;
+        ex:description    "Basic infantry swordsman. Quick and cheap to create" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 20}" ;
+        ex:build_time     21 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     40 ;
+        ex:range          0 ;
+        ex:attack         4 ;
+        ex:armor          "0/1" .
+
+<http://ex.org/units/Man-at-Arms>
+        rdf:type          ex:Unit ;
+        ex:name           "Man-at-Arms" ;
+        ex:description    "Upgraded Militia. Attack bonus vs. buildings" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 20}" ;
+        ex:build_time     21 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     45 ;
+        ex:range          0 ;
+        ex:attack         6 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+2 eagles;+1 buildings" .
+
+<http://ex.org/units/Long_Swordsman>
+        rdf:type          ex:Unit ;
+        ex:name           "Long_Swordsman" ;
+        ex:description    "Upgraded Man-at-Arms" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 20}" ;
+        ex:build_time     21 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     55 ;
+        ex:range          0 ;
+        ex:attack         9 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+4 eagles;+2 buildings" .
+
+<http://ex.org/units/Two-Handed_Swordsman>
+        rdf:type          ex:Unit ;
+        ex:name           "Two-Handed_Swordsman" ;
+        ex:description    "Upgraded Long Swordsman. Attack bonus vs. buildings" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 20}" ;
+        ex:build_time     21 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         11 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+6 eagles;+3 buildings" ;
+        ex:search_radius  4 .
+
+<http://ex.org/units/Champion>
+        rdf:type          ex:Unit ;
+        ex:name           "Champion" ;
+        ex:description    "Upgraded Two-Handed Swordsman" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Barracks" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 20}" ;
+        ex:build_time     21 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     70 ;
+        ex:range          0 ;
+        ex:attack         13 ;
+        ex:armor          "1/1" ;
+        ex:attack_bonus   "+6 eagles;+3 buildings" ;
+        ex:search_radius  5 .
+
+<http://ex.org/units/King>
+        rdf:type          ex:Unit ;
+        ex:name           "King" ;
+        ex:description    "Cannot be produced so the cost and build time just for the sake of interest" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 50}" ;
+        ex:build_time     30 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.32"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     75 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Petard>
+        rdf:type          ex:Unit ;
+        ex:name           "Petard" ;
+        ex:description    "Demolition infantry unit armed with explosives. Bonuses add up - for example against walls and gates: +500 buildings +900 walls = +1400 bonus attack" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 80;\"Gold\": 20}" ;
+        ex:build_time     25 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.8"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         25 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+500 buildings;+100 castle;+60 siege;+900 walls & gates" ;
+        ex:blast_radius   "0.5"^^xsd:float .
+
+<http://ex.org/units/Trebuchet>
+        rdf:type          ex:Unit ;
+        ex:name           "Trebuchet" ;
+        ex:description    "Powerful siege weapon used to destroy buildings and walls from long distance. Cannot fire on close units. Must be packed to move and unpacked to attack. Can cut paths through forests. Unpack time: 0:11" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 200}" ;
+        ex:build_time     50 ;
+        ex:reload_time    10 ;
+        ex:attack_delay   "0.6"^^xsd:float ;
+        ex:movement_rate  "0"^^xsd:float ;
+        ex:line_of_sight  18 ;
+        ex:hit_points     150 ;
+        ex:attack         200 ;
+        ex:armor          "1/150" ;
+        ex:attack_bonus   "+250 buildings" ;
+        ex:accuracy       "15%" .
+
+<http://ex.org/units/Trebuchet_(packed)>
+        rdf:type          ex:Unit ;
+        ex:name           "Trebuchet_(packed)" ;
+        ex:description    "Powerful siege weapon used to destroy buildings and walls from long distance. Cannot fire on close units. Must be packed to move and unpacked to attack. Can cut paths through forests. Unpack time: 0:11" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 200}" ;
+        ex:build_time     50 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.8"^^xsd:float ;
+        ex:line_of_sight  18 ;
+        ex:hit_points     150 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "2/8" ;
+        ex:attack_bonus   "+250 buildings" ;
+        ex:accuracy       "15% (80% if walls/towers/buildings with target radius 1)" .
+
+<http://ex.org/units/Cannon_Galleon>
+        rdf:type          ex:Unit ;
+        ex:name           "Cannon_Galleon" ;
+        ex:description    "Long-range warship used to attack targets on shore to establish beachhead. Fires slowly and has minimum range" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 150}" ;
+        ex:build_time     46 ;
+        ex:reload_time    10 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.1"^^xsd:float ;
+        ex:line_of_sight  15 ;
+        ex:hit_points     120 ;
+        ex:attack         35 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+200 buildings;+15 infantry;+15 archers;+15 cavalry;+40 siege" ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Elite_Cannon_Galleon>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Cannon_Galleon" ;
+        ex:description    "Upgraded Cannon Galleon" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 150}" ;
+        ex:build_time     46 ;
+        ex:reload_time    10 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.1"^^xsd:float ;
+        ex:line_of_sight  17 ;
+        ex:hit_points     150 ;
+        ex:attack         45 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+275 buildings;+15 infantry;+15 archers;+15 cavalry;+40 siege" ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Demolition_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Demolition_Ship" ;
+        ex:description    "Filled with explosives. Self-destructs when used. Pilot near enemy ships and detonate to wrest control of the sea from an entrenched opponent" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 70;\"Gold\": 50}" ;
+        ex:build_time     31 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.6"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         110 ;
+        ex:armor          "0/3" ;
+        ex:attack_bonus   "+220 buildings" ;
+        ex:armor_bonus    "+3 ships/camel" ;
+        ex:blast_radius   "2.5"^^xsd:float .
+
+<http://ex.org/units/Heavy_Demolition_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Heavy_Demolition_Ship" ;
+        ex:description    "Upgraded Demolition Ship" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 70;\"Gold\": 50}" ;
+        ex:build_time     31 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.6"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         140 ;
+        ex:armor          "0/3" ;
+        ex:attack_bonus   "+280 buildings" ;
+        ex:armor_bonus    "+5 ships/camel" ;
+        ex:search_radius  5 ;
+        ex:blast_radius   "3.5"^^xsd:float .
+
+<http://ex.org/units/Fire_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Fire_Ship" ;
+        ex:description    "Spews fire at other ships. Good at sinking galleys. Attack shows pierce attack" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 75;\"Gold\": 45}" ;
+        ex:build_time     36 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     100 ;
+        ex:attack         2 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+2 buildings;+3 ships/camels;+2 turtle ships;+1 melee" ;
+        ex:armor_bonus    "+5 ships/camel" .
+
+<http://ex.org/units/Fast_Fire_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Fast_Fire_Ship" ;
+        ex:description    "Upgraded Fire Ship" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 75;\"Gold\": 45}" ;
+        ex:build_time     36 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.43"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     120 ;
+        ex:attack         3 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+3 buildings;+4 ships/camels;+3 turtle ships;+1 melee" ;
+        ex:armor_bonus    "+7 ships/camel" .
+
+<http://ex.org/units/Galley>
+        rdf:type          ex:Unit ;
+        ex:name           "Galley" ;
+        ex:description    "Small and fast ship with weak attack. Used to scout the water and for early attacks on enemy fishing fleets" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 90;\"Gold\": 30}" ;
+        ex:build_time     60 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.43"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     120 ;
+        ex:range          5 ;
+        ex:attack         6 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+6 buildings;+8 ships/camels;+3 rams" .
+
+<http://ex.org/units/War_Galley>
+        rdf:type          ex:Unit ;
+        ex:name           "War_Galley" ;
+        ex:description    "Upgraded Galley" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 90;\"Gold\": 30}" ;
+        ex:build_time     36 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.43"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     135 ;
+        ex:range          6 ;
+        ex:attack         7 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+7 buildings;+9 ships/camels;+4 rams" .
+
+<http://ex.org/units/Galleon>
+        rdf:type          ex:Unit ;
+        ex:name           "Galleon" ;
+        ex:description    "Upgraded War Galley" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 90;\"Gold\": 30}" ;
+        ex:build_time     36 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.43"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     165 ;
+        ex:range          7 ;
+        ex:attack         8 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+8 buildings;+11 ships/camels;+4 rams" .
+
+<http://ex.org/units/Longboat>
+        rdf:type          ex:Unit ;
+        ex:name           "Longboat" ;
+        ex:description    "Viking unique unit. Fires multiple arrows. volley of 4 arrows (7-1-1-1). Castle needed. Because of the multiple arrows the delay between starts of attacks is roughly 3.34" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 80;\"Gold\": 40}" ;
+        ex:build_time     25 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "9"^^xsd:float ;
+        ex:movement_rate  "1.54"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     130 ;
+        ex:range          6 ;
+        ex:attack         7 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+7 buildings;+9 ships;+4 rams" ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Elite_Longboat>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Longboat" ;
+        ex:description    "Upgraded Longboat" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 80;\"Gold\": 40}" ;
+        ex:build_time     25 ;
+        ex:reload_time    3 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.54"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     160 ;
+        ex:range          7 ;
+        ex:attack         8 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+8 buildings;+11 ships;+4 rams" ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Fishing_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Fishing_Ship" ;
+        ex:description    "Ship to harvest fish (resource)" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 75}" ;
+        ex:build_time     40 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.26"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/6" ;
+        ex:search_radius  12 .
+
+<http://ex.org/units/Trade_Cog>
+        rdf:type          ex:Unit ;
+        ex:name           "Trade_Cog" ;
+        ex:description    "Movement rate 2.00 with caravan" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 100;\"Gold\": 50}" ;
+        ex:build_time     36 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.32"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     80 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/6" .
+
+<http://ex.org/units/Transport_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Transport_Ship" ;
+        ex:description    "Ship to carry units. Garrison inside 5 (10 with careening and 20 with dry dock)" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 125}" ;
+        ex:build_time     45 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.45"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     100 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "4/8" .
+
+<http://ex.org/units/Turtle_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Turtle_Ship" ;
+        ex:description    "Korean unique unit. Slow and ironclad battleship used to destroy other ships at close range" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 200}" ;
+        ex:build_time     50 ;
+        ex:reload_time    6 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     200 ;
+        ex:range          6 ;
+        ex:attack         50 ;
+        ex:armor          "6/5" ;
+        ex:armor_bonus    "+8 ships" ;
+        ex:blast_radius   "0.5"^^xsd:float .
+
+<http://ex.org/units/Elite_Turtle_Ship>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Turtle_Ship" ;
+        ex:description    "Upgraded Turtle Ship" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Dock" ;
+        ex:cost           "{\"Wood\": 200;\"Gold\": 200}" ;
+        ex:build_time     50 ;
+        ex:reload_time    6 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     300 ;
+        ex:range          6 ;
+        ex:attack         50 ;
+        ex:armor          "8/6" ;
+        ex:armor_bonus    "+11 ships;+1 turtle ship armor" ;
+        ex:blast_radius   "0.5"^^xsd:float .
+
+<http://ex.org/units/Wild_Boar>
+        rdf:type          ex:Unit ;
+        ex:name           "Wild_Boar" ;
+        ex:description    "Wild boar" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"; \"Provides\":{\"Food\": 340; \"Resource Decay\": 0.25 } }" ;
+        ex:build_time     0 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     75 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Deer>
+        rdf:type          ex:Unit ;
+        ex:name           "Deer" ;
+        ex:description    "Wild deers running around" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"; \"Provides\":{\"Food\": 140; \"Resource Decay\": 0.25 } }" ;
+        ex:build_time     0 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.737"^^xsd:float ;
+        ex:line_of_sight  2 ;
+        ex:hit_points     5 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Horse>
+        rdf:type          ex:Unit ;
+        ex:name           "Horse" ;
+        ex:description    "Can be used as scout" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"}" ;
+        ex:build_time     0 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  2 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Sheep>
+        rdf:type          ex:Unit ;
+        ex:name           "Sheep" ;
+        ex:description    "Can be picked up by player and used to scout" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"; \"Provides\":{\"Food\": 100; \"Resource Decay\": 0.25 } }" ;
+        ex:build_time     0 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.7"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     7 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Turkey>
+        rdf:type          ex:Unit ;
+        ex:name           "Turkey" ;
+        ex:description    "Alternative to sheep" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"; \"Provides\":{\"Food\": 100; \"Resource Decay\": 0.25 } }" ;
+        ex:build_time     0 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.7"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     7 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Wolf>
+        rdf:type          ex:Unit ;
+        ex:name           "Wolf" ;
+        ex:description    "Wild wolf. Gives no food just kills people. Line of sight also depends on difficulty (4-12 LOS)" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"}" ;
+        ex:build_time     0 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  12 ;
+        ex:hit_points     25 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Jaguar>
+        rdf:type          ex:Unit ;
+        ex:name           "Jaguar" ;
+        ex:description    "Wild jaguar. Same as wolf on yucatan and other americas maps" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Gaia" ;
+        ex:cost           "{\"Cost\":\"No cost\"}" ;
+        ex:build_time     0 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  12 ;
+        ex:hit_points     25 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Trade_Cart>
+        rdf:type          ex:Unit ;
+        ex:name           "Trade_Cart" ;
+        ex:description    "Used to trade with other players by land. Carries goods from your Market to another player's Market and brings back gold. The farther the Market the higher your profit" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Market" ;
+        ex:cost           "{\"Wood\": 100;\"Gold\": 50}" ;
+        ex:build_time     50 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     70 ;
+        ex:range          0 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Missionary>
+        rdf:type          ex:Unit ;
+        ex:name           "Missionary" ;
+        ex:description    "Spanish unique unit. Mounted monk" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Monastery" ;
+        ex:cost           "{\"Gold\": 100}" ;
+        ex:build_time     51 ;
+        ex:reload_time    0 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.1"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     30 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Monk>
+        rdf:type          ex:Unit ;
+        ex:name           "Monk" ;
+        ex:description    "Slow and weak. Converts enemy units and ships to your civilization (player color). Heals wounded villagers and military units (except siege weapons)" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Monastery" ;
+        ex:cost           "{\"Gold\": 100}" ;
+        ex:build_time     51 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.7"^^xsd:float ;
+        ex:line_of_sight  11 ;
+        ex:hit_points     30 ;
+        ex:attack         0 ;
+        ex:armor          "0/0" .
+
+<http://ex.org/units/Bombard_Cannon>
+        rdf:type          ex:Unit ;
+        ex:name           "Bombard_Cannon" ;
+        ex:description    "Powerful mobile anti-building siege weapon" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 225;\"Gold\": 225}" ;
+        ex:build_time     56 ;
+        ex:attack_delay   "0.21"^^xsd:float ;
+        ex:movement_rate  "0.7"^^xsd:float ;
+        ex:line_of_sight  14 ;
+        ex:hit_points     80 ;
+        ex:attack         40 ;
+        ex:armor          "2/5" ;
+        ex:attack_bonus   "+200 buildings;+40 siege/camels;+20 siege;+40 stone defense" ;
+        ex:accuracy       "92%" ;
+        ex:blast_radius   "0.5"^^xsd:float .
+
+<http://ex.org/units/Mangonel>
+        rdf:type          ex:Unit ;
+        ex:name           "Mangonel" ;
+        ex:description    "Wheeled siege weapon used to attack a small mass of units. Area of effect attack. Can attack ground. Weak vs. close nonranged units" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 135}" ;
+        ex:build_time     46 ;
+        ex:reload_time    6 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     50 ;
+        ex:attack         40 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+35 buildings;+12 siege" ;
+        ex:blast_radius   "1"^^xsd:float .
+
+<http://ex.org/units/Onager>
+        rdf:type          ex:Unit ;
+        ex:name           "Onager" ;
+        ex:description    "Upgraded Mangonel" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 135}" ;
+        ex:build_time     46 ;
+        ex:reload_time    6 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     60 ;
+        ex:attack         50 ;
+        ex:armor          "0/7" ;
+        ex:attack_bonus   "+45 buildings;+12 siege" ;
+        ex:blast_radius   "1.25"^^xsd:float .
+
+<http://ex.org/units/Siege_Onager>
+        rdf:type          ex:Unit ;
+        ex:name           "Siege_Onager" ;
+        ex:description    "Upgraded Onager" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 135}" ;
+        ex:build_time     46 ;
+        ex:reload_time    6 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     70 ;
+        ex:attack         75 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+60 buildings;+12 siege" ;
+        ex:blast_radius   "1.5"^^xsd:float .
+
+<http://ex.org/units/Battering_Ram>
+        rdf:type          ex:Unit ;
+        ex:name           "Battering_Ram" ;
+        ex:description    "Slow and lumbering siege weapon used to reduce enemy towns to ruins. Can garrison 4 units (affects movement rate +0.05 per unit)" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 75}" ;
+        ex:build_time     36 ;
+        ex:reload_time    5 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.5"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     175 ;
+        ex:range          0 ;
+        ex:attack         2 ;
+        ex:armor          "0/180" ;
+        ex:attack_bonus   "+125 (+165 full) buildings;+40 siege;+150 (+190 full) with siege engineers buildings" ;
+        ex:armor_bonus    "-3 melee" .
+
+<http://ex.org/units/Capped_Ram>
+        rdf:type          ex:Unit ;
+        ex:name           "Capped_Ram" ;
+        ex:description    "Upgraded Battering Ram. Can garrison 4 units (affects movement rate +0.05 per unit). Max speed at 0.7" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 75}" ;
+        ex:build_time     36 ;
+        ex:reload_time    5 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.5"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     200 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/190" ;
+        ex:attack_bonus   "+150 (+190 full) buildings;+50 siege;+180 (+220 full) with siege engineers buildings" ;
+        ex:armor_bonus    "-3 melee;+1 ram armor" ;
+        ex:blast_radius   "1.5"^^xsd:float .
+
+<http://ex.org/units/Siege_Ram>
+        rdf:type          ex:Unit ;
+        ex:name           "Siege_Ram" ;
+        ex:description    "Upgraded Capped Ram. Can garrison 6 units (affects movement rate +0.05 per unit)" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 160;\"Gold\": 75}" ;
+        ex:build_time     36 ;
+        ex:reload_time    5 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     270 ;
+        ex:range          0 ;
+        ex:attack         4 ;
+        ex:armor          "0/195" ;
+        ex:attack_bonus   "+200 (+260 full) buildings;+65 siege;+240 (+300 full) with siege engineers buildings" ;
+        ex:armor_bonus    "-3 melee;+2 ram armor" ;
+        ex:blast_radius   "2"^^xsd:float .
+
+<http://ex.org/units/Scorpion>
+        rdf:type          ex:Unit ;
+        ex:name           "Scorpion" ;
+        ex:description    "Damage to all units in the path" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 75;\"Gold\": 75}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0.21"^^xsd:float ;
+        ex:movement_rate  "0.65"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     40 ;
+        ex:attack         12 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+2 buildings;+6 war elephants;+0 melee;+1 rams" ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Heavy_Scorpion>
+        rdf:type          ex:Unit ;
+        ex:name           "Heavy_Scorpion" ;
+        ex:description    "Upgraded Scorpion" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Siege Workshop" ;
+        ex:cost           "{\"Wood\": 75;\"Gold\": 75}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0.21"^^xsd:float ;
+        ex:movement_rate  "0.65"^^xsd:float ;
+        ex:line_of_sight  9 ;
+        ex:hit_points     50 ;
+        ex:attack         16 ;
+        ex:armor          "0/7" ;
+        ex:attack_bonus   "+4 buildings;+8 war elephants;+0 melee;+2 rams" ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Camel>
+        rdf:type          ex:Unit ;
+        ex:name           "Camel" ;
+        ex:description    "Excels at killing other mounted units. (not classified as cavalry)" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 60}" ;
+        ex:build_time     22 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.45"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     100 ;
+        ex:range          0 ;
+        ex:attack         5 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+10 against cavalry;+5 ships/camels" .
+
+<http://ex.org/units/Heavy_Camel>
+        rdf:type          ex:Unit ;
+        ex:name           "Heavy_Camel" ;
+        ex:description    "Upgraded Camel. Attack bonus vs. cavalry. (not classified as cavalry)" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 60}" ;
+        ex:build_time     22 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.45"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     120 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+18 against cavalry;+9 ships/camels" ;
+        ex:search_radius  4 .
+
+<http://ex.org/units/Knight>
+        rdf:type          ex:Unit ;
+        ex:name           "Knight" ;
+        ex:description    "Fast and heavy cavalry" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 75}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     100 ;
+        ex:range          0 ;
+        ex:attack         10 ;
+        ex:armor          "2/2" .
+
+<http://ex.org/units/Cavalier>
+        rdf:type          ex:Unit ;
+        ex:name           "Cavalier" ;
+        ex:description    "Upgraded Knight" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 75}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     120 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "2/2" .
+
+<http://ex.org/units/Paladin>
+        rdf:type          ex:Unit ;
+        ex:name           "Paladin" ;
+        ex:description    "Upgraded Cavalier" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 75}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     160 ;
+        ex:range          0 ;
+        ex:attack         14 ;
+        ex:armor          "2/3" .
+
+<http://ex.org/units/Scout_Cavalry>
+        rdf:type          ex:Unit ;
+        ex:name           "Scout_Cavalry" ;
+        ex:description    "Fast with extensive line of sight. Resistant to conversion and +2 Line of sight per age" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"info\":\"All civilizations except Mayans and Aztecs start with an scout cavalry\"}" ;
+        ex:build_time     0 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     45 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+6 monks" ;
+        rdf:type          ex:Unit ;
+        ex:name           "Scout_Cavalry" ;
+        ex:description    "Fast with extensive line of sight. Resistant to conversion +2 Line of sight per age" ;
+        ex:age            "Feudal" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 80}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.55"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     45 ;
+        ex:range          0 ;
+        ex:attack         5 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+6 monks" .
+
+<http://ex.org/units/Light_Cavalry>
+        rdf:type          ex:Unit ;
+        ex:name           "Light_Cavalry" ;
+        ex:description    "Upgraded scout cavalry. +2 Line of sight per age" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 80}" ;
+        ex:build_time     30 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.5"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+10 monks" .
+
+<http://ex.org/units/Hussar>
+        rdf:type          ex:Unit ;
+        ex:name           "Hussar" ;
+        ex:description    "Upgraded Light Cavalry. +2 Line of sight per age" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Stable" ;
+        ex:cost           "{\"Food\": 80}" ;
+        ex:build_time     30 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.5"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     75 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+12 monks" .
+
+<http://ex.org/units/Villager>
+        rdf:type          ex:Unit ;
+        ex:name           "Villager" ;
+        ex:description    "Gathers resources. Builds and repairs buildings. Also repairs ships and siege weapons" ;
+        ex:age            "Dark" ;
+        ex:created_in     "Town Center" ;
+        ex:cost           "{\"Food\": 50}" ;
+        ex:build_time     25 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.8"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     25 ;
+        ex:range          0 ;
+        ex:attack         3 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+3 buildings;+6 stone defense" .
+
+<http://ex.org/units/Berserk>
+        rdf:type          ex:Unit ;
+        ex:name           "Berserk" ;
+        ex:description    "Viking unique unit. Infantry that slowly heals itself" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 65;\"Gold\": 25}" ;
+        ex:build_time     16 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     55 ;
+        ex:range          0 ;
+        ex:attack         9 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+2 eagles;+2 buildings" .
+
+<http://ex.org/units/Elite_Berserk>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Berserk" ;
+        ex:description    "Upgraded Berserk" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 65;\"Gold\": 25}" ;
+        ex:build_time     16 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     72 ;
+        ex:range          0 ;
+        ex:attack         14 ;
+        ex:armor          "2/1" ;
+        ex:attack_bonus   "+3 eagles;+3 buildings" .
+
+<http://ex.org/units/Cataphract>
+        rdf:type          ex:Unit ;
+        ex:name           "Cataphract" ;
+        ex:description    "Byzantine unique unit. Heavily armored cavalry" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 70;\"Gold\": 75}" ;
+        ex:build_time     20 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     110 ;
+        ex:range          0 ;
+        ex:attack         9 ;
+        ex:armor          "2/1" ;
+        ex:attack_bonus   "+9 infantry" ;
+        ex:armor_bonus    "+12 cavalry" .
+
+<http://ex.org/units/Elite_Cataphract>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Cataphract" ;
+        ex:description    "Upgraded Cataphract" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 70;\"Gold\": 75}" ;
+        ex:build_time     20 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     150 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "2/1" ;
+        ex:attack_bonus   "+12 infantry" ;
+        ex:armor_bonus    "+16 cavalry" .
+
+<http://ex.org/units/Chu_Ko_Nu>
+        rdf:type          ex:Unit ;
+        ex:name           "Chu_Ko_Nu" ;
+        ex:description    "Chinese unique unit. Archer with mediocre range. Shoots a volley of 2 extra arrows with 3 attack. Because of the multiple arrows the delay between starts of attacks is more (roughly 3.6)" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 40;\"Gold\": 35}" ;
+        ex:build_time     19 ;
+        ex:attack_delay   "0.21"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     45 ;
+        ex:range          4 ;
+        ex:attack         8 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:accuracy       "85%" .
+
+<http://ex.org/units/Elite_Chu_Ko_Nu>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Chu_Ko_Nu" ;
+        ex:description    "Upgraded Chu Ko NU" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 40;\"Gold\": 35}" ;
+        ex:build_time     13 ;
+        ex:attack_delay   "0.21"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     50 ;
+        ex:range          6 ;
+        ex:attack         8 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:accuracy       "85%" .
+
+<http://ex.org/units/Conquistador>
+        rdf:type          ex:Unit ;
+        ex:name           "Conquistador" ;
+        ex:description    "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack but inaccurate at range. (Only archer armor upgrades apply from blacksmith not range or attack)" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 70}" ;
+        ex:build_time     24 ;
+        ex:attack_delay   "0.4"^^xsd:float ;
+        ex:movement_rate  "1.3"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     55 ;
+        ex:range          6 ;
+        ex:attack         16 ;
+        ex:armor          "2/2" ;
+        ex:attack_bonus   "+4 rams" ;
+        ex:accuracy       "65%" .
+
+<http://ex.org/units/Elite_Conquistador>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Conquistador" ;
+        ex:description    "Upgraded Conquistador" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 70}" ;
+        ex:build_time     24 ;
+        ex:attack_delay   "0.4"^^xsd:float ;
+        ex:movement_rate  "1.3"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     70 ;
+        ex:range          6 ;
+        ex:attack         18 ;
+        ex:armor          "2/2" ;
+        ex:attack_bonus   "+6 ram;+2 buildings" ;
+        ex:accuracy       "70%" .
+
+<http://ex.org/units/Huskarl>
+        rdf:type          ex:Unit ;
+        ex:name           "Huskarl" ;
+        ex:description    "Gothic unique unit. Infantry with substantial pierce armor; virtually immune to archer fire. Attack bonus vs. buildings and archers" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 52;\"Gold\": 26}" ;
+        ex:build_time     16 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         10 ;
+        ex:armor          "0/6" ;
+        ex:attack_bonus   "+2 eagles;+2 buildings;+6 archers/hand cannoneers" .
+
+<http://ex.org/units/Elite_Huskarl>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Huskarl" ;
+        ex:description    "Upgraded Huskarl" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 52;\"Gold\": 26}" ;
+        ex:build_time     16 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.05"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     70 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "0/8" ;
+        ex:attack_bonus   "+3 eagles;+3 buildings;+10 archers/hand cannoneers" .
+
+<http://ex.org/units/Jaguar_Warrior>
+        rdf:type          ex:Unit ;
+        ex:name           "Jaguar_Warrior" ;
+        ex:description    "Aztec unique unit. Attack bonus vs. other infantry" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 30}" ;
+        ex:build_time     17 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     50 ;
+        ex:range          0 ;
+        ex:attack         10 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "+12 eagles;+2 buildings;+10 infantry" .
+
+<http://ex.org/units/Elite_Jaguar_Warrior>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Jaguar_Warrior" ;
+        ex:description    "Upgraded Jaguar Warrior" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 30}" ;
+        ex:build_time     17 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     75 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "2/0" ;
+        ex:attack_bonus   "+12 eagles;+2 buildings;+10 infantry" .
+
+<http://ex.org/units/Janissary>
+        rdf:type          ex:Unit ;
+        ex:name           "Janissary" ;
+        ex:description    "Turkish unique unit. Hand Cannoneer with longer range and no minimum range" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 55}" ;
+        ex:build_time     17 ;
+        ex:attack_delay   "0.28"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     44 ;
+        ex:range          8 ;
+        ex:attack         17 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "+2 rams" ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Elite_Janissary>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Janissary" ;
+        ex:description    "Upgraded Janissary" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 55}" ;
+        ex:build_time     17 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     50 ;
+        ex:range          8 ;
+        ex:attack         22 ;
+        ex:armor          "2/0" ;
+        ex:attack_bonus   "+3 rams" ;
+        ex:accuracy       "50%" .
+
+<http://ex.org/units/Longbowman>
+        rdf:type          ex:Unit ;
+        ex:name           "Longbowman" ;
+        ex:description    "British unique unit. Powerful archer with long range" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 35;\"Gold\": 40}" ;
+        ex:build_time     19 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.35"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     35 ;
+        ex:range          6 ;
+        ex:attack         6 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:accuracy       "70%" .
+
+<http://ex.org/units/Elite_Longbowman>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Longbowman" ;
+        ex:description    "Upgraded Longbowman" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 35;\"Gold\": 40}" ;
+        ex:build_time     19 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.35"^^xsd:float ;
+        ex:movement_rate  "0.96"^^xsd:float ;
+        ex:line_of_sight  10 ;
+        ex:hit_points     40 ;
+        ex:range          8 ;
+        ex:attack         7 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+2 spearmen" ;
+        ex:accuracy       "70%" .
+
+<http://ex.org/units/Mameluke>
+        rdf:type          ex:Unit ;
+        ex:name           "Mameluke" ;
+        ex:description    "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 85}" ;
+        ex:build_time     23 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.6"^^xsd:float ;
+        ex:movement_rate  "1.4"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     65 ;
+        ex:range          3 ;
+        ex:attack         7 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+9 cavalry" ;
+        ex:armor_bonus    "+11 cavalry" .
+
+<http://ex.org/units/Elite_Mameluke>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Mameluke" ;
+        ex:description    "Upgraded Mameluke" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 85}" ;
+        ex:build_time     23 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.4"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     80 ;
+        ex:range          3 ;
+        ex:attack         10 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "+12 cavalry" ;
+        ex:armor_bonus    "+11 cavalry" .
+
+<http://ex.org/units/Mangudai>
+        rdf:type          ex:Unit ;
+        ex:name           "Mangudai" ;
+        ex:description    "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 55;\"Gold\": 65}" ;
+        ex:build_time     26 ;
+        ex:attack_delay   "1"^^xsd:float ;
+        ex:movement_rate  "1.45"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          4 ;
+        ex:attack         6 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+1 spearmen;+3 siege" ;
+        ex:search_radius  5 ;
+        ex:accuracy       "95%" .
+
+<http://ex.org/units/Elite_Mangudai>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Mangudai" ;
+        ex:description    "Upgraded Mangudai" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 55;\"Gold\": 65}" ;
+        ex:build_time     26 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.45"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          4 ;
+        ex:attack         8 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+1 spearmen;+5 siege" ;
+        ex:search_radius  6 ;
+        ex:accuracy       "95%" .
+
+<http://ex.org/units/Plumed_Archer>
+        rdf:type          ex:Unit ;
+        ex:name           "Plumed_Archer" ;
+        ex:description    "Mayan unique unit. Strong fast and well-armored archer with less attack than other archers" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 37;\"Gold\": 37}" ;
+        ex:build_time     16 ;
+        ex:attack_delay   "0.5"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     50 ;
+        ex:range          4 ;
+        ex:attack         5 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+1 infantry;+2 spearmen" ;
+        ex:accuracy       "80%" .
+
+<http://ex.org/units/Elite_Plumed_Archer>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Plumed_Archer" ;
+        ex:description    "Upgraded Plumed Archer" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 32;\"Gold\": 32}" ;
+        ex:build_time     16 ;
+        ex:attack_delay   "0.5"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     65 ;
+        ex:range          5 ;
+        ex:attack         5 ;
+        ex:armor          "0/2" ;
+        ex:attack_bonus   "+2 infantry;+2 spearmen" ;
+        ex:accuracy       "80%" .
+
+<http://ex.org/units/Samurai>
+        rdf:type          ex:Unit ;
+        ex:name           "Samurai" ;
+        ex:description    "Japanese unique unit. Infantry with fast attack. Attack bonus vs. other unique units and buildings" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 30}" ;
+        ex:build_time     9 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     60 ;
+        ex:range          0 ;
+        ex:attack         8 ;
+        ex:armor          "1/1" ;
+        ex:attack_bonus   "+2 eagles;+2 buildings;+10 unique units" .
+
+<http://ex.org/units/Elite_Samurai>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Samurai" ;
+        ex:description    "Upgraded Samurai" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 30}" ;
+        ex:build_time     9 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     80 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "1/1" ;
+        ex:attack_bonus   "+3 eagles;+3 buildings;+12 unique units" .
+
+<http://ex.org/units/Tarkan>
+        rdf:type          ex:Unit ;
+        ex:name           "Tarkan" ;
+        ex:description    "Hun unique unit. Cavalry with attack bonus vs. buildings. (Attack bonuses stack - for example +16 against a palisade wall (8 buildings + 8 walls))" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 60}" ;
+        ex:build_time     14 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     90 ;
+        ex:range          0 ;
+        ex:attack         7 ;
+        ex:armor          "1/2" ;
+        ex:attack_bonus   "+10 castle;+8 buildings;+12 stone defense;+8 walls and gates" .
+
+<http://ex.org/units/Elite_Tarkan>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Tarkan" ;
+        ex:description    "Upgraded Tarkan" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 60;\"Gold\": 60}" ;
+        ex:build_time     14 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.35"^^xsd:float ;
+        ex:line_of_sight  7 ;
+        ex:hit_points     150 ;
+        ex:range          0 ;
+        ex:attack         11 ;
+        ex:armor          "1/3" ;
+        ex:attack_bonus   "+10 castle;+10 buildings;+12 stone defense;+10 walls and gates" .
+
+<http://ex.org/units/Teutonic_Knight>
+        rdf:type          ex:Unit ;
+        ex:name           "Teutonic_Knight" ;
+        ex:description    "Teutonic unique unit. Infantry with effective armor and slow but powerful attack" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 85;\"Gold\": 40}" ;
+        ex:build_time     12 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.65"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     70 ;
+        ex:range          0 ;
+        ex:attack         12 ;
+        ex:armor          "5/2" ;
+        ex:attack_bonus   "+4 eagles;+4 buildings" .
+
+<http://ex.org/units/Elite_Teutonic_Knight>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Teutonic_Knight" ;
+        ex:description    "Upgraded Teutonic Knight" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 85;\"Gold\": 40}" ;
+        ex:build_time     12 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.65"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     100 ;
+        ex:range          0 ;
+        ex:attack         17 ;
+        ex:armor          "10/2" ;
+        ex:attack_bonus   "+4 eagles;+4 buildings" .
+
+<http://ex.org/units/Throwing_Axeman>
+        rdf:type          ex:Unit ;
+        ex:name           "Throwing_Axeman" ;
+        ex:description    "Frankish unique unit. Infantry with ranged attack" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 25}" ;
+        ex:build_time     17 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "1.2"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     50 ;
+        ex:range          3 ;
+        ex:attack         7 ;
+        ex:armor          "0/0" ;
+        ex:attack_bonus   "+1 eagles;+1 buildings" .
+
+<http://ex.org/units/Elite_Throwing_Axeman>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Throwing_Axeman" ;
+        ex:description    "Upgraded Throwing Axeman" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 55;\"Gold\": 25}" ;
+        ex:build_time     17 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0.8"^^xsd:float ;
+        ex:movement_rate  "0.9"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:hit_points     60 ;
+        ex:range          4 ;
+        ex:attack         8 ;
+        ex:armor          "1/0" ;
+        ex:attack_bonus   "+2 eagles;+2 buildings" .
+
+<http://ex.org/units/War_Elephant>
+        rdf:type          ex:Unit ;
+        ex:name           "War_Elephant" ;
+        ex:description    "Persian unique unit. Slow powerful strong and well-armored cavalry" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 200;\"Gold\": 75}" ;
+        ex:build_time     31 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  4 ;
+        ex:hit_points     450 ;
+        ex:range          0 ;
+        ex:attack         15 ;
+        ex:armor          "1/2" ;
+        ex:attack_bonus   "+7 buildings;+7 stone defense" .
+
+<http://ex.org/units/Elite_War_Elephant>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_War_Elephant" ;
+        ex:description    "Upgraded War Elephant" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 200;\"Gold\": 75}" ;
+        ex:build_time     31 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "0.6"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     600 ;
+        ex:range          0 ;
+        ex:attack         20 ;
+        ex:armor          "1/3" ;
+        ex:attack_bonus   "+10 buildings;+10 stone defense" .
+
+<http://ex.org/units/War_Wagon>
+        rdf:type          ex:Unit ;
+        ex:name           "War_Wagon" ;
+        ex:description    "Korean unique unit. Heavily armored horse-drawn archery unit" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 120;\"Gold\": 60}" ;
+        ex:build_time     25 ;
+        ex:attack_delay   "1"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  6 ;
+        ex:range          4 ;
+        ex:attack         9 ;
+        ex:armor          "0/3" ;
+        ex:attack_bonus   "+5 buildings" ;
+        ex:search_radius  6 ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Elite_War_Wagon>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_War_Wagon" ;
+        ex:description    "Upgraded War Wagon" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Wood\": 120;\"Gold\": 60}" ;
+        ex:build_time     25 ;
+        ex:attack_delay   "1"^^xsd:float ;
+        ex:movement_rate  "1.2"^^xsd:float ;
+        ex:line_of_sight  8 ;
+        ex:hit_points     200 ;
+        ex:range          5 ;
+        ex:attack         9 ;
+        ex:armor          "0/4" ;
+        ex:attack_bonus   "+5 buildings" ;
+        ex:search_radius  7 ;
+        ex:accuracy       "100%" .
+
+<http://ex.org/units/Woad_Raider>
+        rdf:type          ex:Unit ;
+        ex:name           "Woad_Raider" ;
+        ex:description    "Celtic unique unit. Exceptionally quick infantry. Attack bonus vs. buildings" ;
+        ex:age            "Castle" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 65;\"Gold\": 25}" ;
+        ex:build_time     10 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.38"^^xsd:float ;
+        ex:line_of_sight  3 ;
+        ex:hit_points     65 ;
+        ex:range          0 ;
+        ex:attack         8 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+2 eagles;+2 buildings" .
+
+<http://ex.org/units/Elite_Woad_Raider>
+        rdf:type          ex:Unit ;
+        ex:name           "Elite_Woad_Raider" ;
+        ex:description    "Upgraded Woad Raider" ;
+        ex:age            "Imperial" ;
+        ex:created_in     "Castle" ;
+        ex:cost           "{\"Food\": 65;\"Gold\": 25}" ;
+        ex:build_time     10 ;
+        ex:reload_time    2 ;
+        ex:attack_delay   "0"^^xsd:float ;
+        ex:movement_rate  "1.38"^^xsd:float ;
+        ex:line_of_sight  5 ;
+        ex:hit_points     80 ;
+        ex:range          0 ;
+        ex:attack         13 ;
+        ex:armor          "0/1" ;
+        ex:attack_bonus   "+3 eagles;+3 buildings" .
