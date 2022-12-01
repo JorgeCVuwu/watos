@@ -1,0 +1,3576 @@
+@prefix : <http://ex.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://ex.org/accuracy
+:accuracy rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/armor
+:armor rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/attack
+:attack rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/attack_delay
+:attack_delay rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/blast_radius
+:blast_radius rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus
+:bonus rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_against_cavalry
+:bonus_against_cavalry rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_against_cavalry_archers
+:bonus_against_cavalry_archers rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_archers
+:bonus_archers rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_buildings
+:bonus_buildings rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_buildings_full
+:bonus_buildings_full rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_camel
+:bonus_camel rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_camels
+:bonus_camels rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_castle
+:bonus_castle rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_cavalry
+:bonus_cavalry rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_conquistadors
+:bonus_conquistadors rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_eagles
+:bonus_eagles rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_hand_cannon
+:bonus_hand_cannon rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_hand_cannoneers
+:bonus_hand_cannoneers rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_infantry
+:bonus_infantry rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_melee
+:bonus_melee rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_monks
+:bonus_monks rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_rams
+:bonus_rams rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_ship
+:bonus_ship rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_ships
+:bonus_ships rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_siege
+:bonus_siege rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_skirms
+:bonus_skirms rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_spearmen
+:bonus_spearmen rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_stone_defense
+:bonus_stone_defense rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_turtle_ships
+:bonus_turtle_ships rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_unique_units
+:bonus_unique_units rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_walls_and_gates
+:bonus_walls_and_gates rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_war_elephants
+:bonus_war_elephants rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_with_siege_engineers_buildings
+:bonus_with_siege_engineers_buildings rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/bonus_with_siege_engineers_buildings_full
+:bonus_with_siege_engineers_buildings_full rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/build_time
+:build_time rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/cost
+:cost rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/description
+:description rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/food
+:food rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/gold
+:gold rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/hit_points
+:hit_points rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/line_of_sight
+:line_of_sight rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/melee_armor
+:melee_armor rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/minimum_range
+:minimum_range rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/movement_rate
+:movement_rate rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/name
+:name rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/pierce_armor
+:pierce_armor rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/range
+:range rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/sequel
+:sequel rdf:type owl:AnnotationProperty .
+
+
+###  http://ex.org/wood
+:wood rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://ex.org/age
+:age rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf owl:topObjectProperty ;
+     rdfs:range :Age .
+
+
+###  http://ex.org/created_in
+:created_in rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:range :Building .
+
+
+###  http://ex.org/expansion
+:expansion rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:range :Expansion .
+
+
+###  http://ex.org/upgraded_from
+:upgraded_from rdf:type owl:ObjectProperty ;
+               owl:equivalentProperty [ owl:inverseOf :upgrades_to
+                                      ] ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf :upgrades_to .
+
+
+###  http://ex.org/upgrades_to
+:upgrades_to rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty [ owl:inverseOf :upgraded_from
+                                    ] ;
+             rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://ex.org/Age
+:Age rdf:type owl:Class ;
+     rdfs:subClassOf owl:Thing ;
+     owl:disjointWith owl:Nothing .
+
+
+###  http://ex.org/Animal
+:Animal rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        owl:disjointWith owl:Nothing .
+
+
+###  http://ex.org/Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          owl:disjointWith owl:Nothing .
+
+
+###  http://ex.org/Expansion
+:Expansion rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           owl:disjointWith owl:Nothing .
+
+
+###  http://ex.org/Unit
+:Unit rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      owl:disjointWith owl:Nothing .
+
+
+###  http://www.w3.org/2002/07/owl#Nothing
+owl:Nothing rdfs:subClassOf owl:Nothing ;
+            owl:disjointWith owl:Thing .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://ex.org/Age_Of_Kings
+:Age_Of_Kings rdf:type owl:NamedIndividual ,
+                       :Expansion ,
+                       owl:Thing ;
+              :sequel :The_Conquerors .
+
+
+###  http://ex.org/Arbalest
+:Arbalest rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Imperial_Age ;
+          :created_in :Archery_Range ;
+          :expansion :Age_Of_Kings ;
+          :upgraded_from :Crossbowman ;
+          :accuracy "90.0"^^xsd:float ;
+          :armor _:genid6 ;
+          :attack 6 ;
+          :attack_delay "0.35"^^xsd:float ;
+          :bonus [ :bonus_spearmen "3.0"^^xsd:float
+                 ] ;
+          :build_time 27 ;
+          :cost _:genid8 ;
+          :description "Upgraded crossbowman" ;
+          :hit_points 40 ;
+          :line_of_sight 7 ;
+          :movement_rate "0.96"^^xsd:float ;
+          :name "Arbalest" ;
+          :range 5 .
+
+_:genid6 :melee_armor 0 ;
+          :pierce_armor 0 .
+
+_:genid8 :gold "45.0"^^xsd:float ;
+          :wood "25.0"^^xsd:float .
+
+
+###  http://ex.org/Archer
+:Archer rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Feudal_Age ;
+        :created_in :Archery_Range ;
+        :expansion :Age_Of_Kings ;
+        :upgrades_to :Crossbowman ;
+        :accuracy "80.0"^^xsd:float ;
+        :armor _:genid9 ;
+        :attack 4 ;
+        :attack_delay "0.35"^^xsd:float ;
+        :bonus [ ] ;
+:build_time 35 ;
+:cost _:genid11 ;
+:description "Quick and light. Weak at close range; excels at battle from distance" ;
+:hit_points 4 ;
+:line_of_sight 6 ;
+:movement_rate "0.96"^^xsd:float ;
+:name "Archer" ;
+:range 30 .
+
+_:genid9 :melee_armor 0 ;
+          :pierce_armor 0 .
+
+_:genid11 :gold "45.0"^^xsd:float ;
+           :wood "25.0"^^xsd:float .
+
+
+###  http://ex.org/Archery_Range
+:Archery_Range rdf:type owl:NamedIndividual ,
+                        :Building ,
+                        owl:Thing .
+
+
+###  http://ex.org/Barracks
+:Barracks rdf:type owl:NamedIndividual ,
+                   :Building ,
+                   owl:Thing .
+
+
+###  http://ex.org/Battering_Ram
+:Battering_Ram rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Castle_Age ;
+               :created_in :Siege_Workshop ;
+               :expansion :Age_Of_Kings ;
+               :upgrades_to :Capped_Ram ;
+               :armor _:genid12 ;
+               :attack 2 ;
+               :attack_delay 0 ;
+               :bonus _:genid13 ;
+               :build_time 36 ;
+               :cost _:genid14 ;
+               :description "Slow and lumbering siege weapon used to reduce enemy towns to ruins. Can garrison 4 units (affects movement rate +0.05 per unit)" ;
+               :hit_points 175 ;
+               :line_of_sight 3 ;
+               :movement_rate "0.5"^^xsd:float ;
+               :name "Battering_Ram" ;
+               :range 0 .
+
+_:genid12 :melee_armor 0 ;
+           :pierce_armor 180 .
+
+_:genid13 :bonus_buildings "125.0"^^xsd:float ;
+           :bonus_buildings_full "165.0"^^xsd:float ;
+           :bonus_siege "40.0"^^xsd:float ;
+           :bonus_with_siege_engineers_buildings "150.0"^^xsd:float ;
+           :bonus_with_siege_engineers_buildings_full "190.0"^^xsd:float .
+
+_:genid14 :gold "75.0"^^xsd:float ;
+           :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Berserk
+:Berserk rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Castle_Age ;
+         :created_in :Castle ;
+         :expansion :Age_Of_Kings ;
+         :upgrades_to :Elite_Berserk ;
+         :armor _:genid15 ;
+         :attack 9 ;
+         :attack_delay 0 ;
+         :bonus _:genid16 ;
+         :build_time 16 ;
+         :cost _:genid17 ;
+         :description "Viking unique unit. Infantry that slowly heals itself" ;
+         :hit_points 55 ;
+         :line_of_sight 3 ;
+         :movement_rate "1.05"^^xsd:float ;
+         :name "Berserk" ;
+         :range 0 .
+
+_:genid15 :melee_armor 0 ;
+           :pierce_armor 1 .
+
+_:genid16 :bonus_buildings "2.0"^^xsd:float ;
+           :bonus_eagles "2.0"^^xsd:float .
+
+_:genid17 :food "65.0"^^xsd:float ;
+           :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Bombard_Cannon
+:Bombard_Cannon rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Siege_Workshop ;
+                :expansion :Age_Of_Kings ;
+                :accuracy "92.0"^^xsd:float ;
+                :armor _:genid18 ;
+                :attack 40 ;
+                :attack_delay "0.21"^^xsd:float ;
+                :blast_radius "0.5"^^xsd:float ;
+                :bonus _:genid19 ;
+                :build_time 56 ;
+                :cost _:genid20 ;
+                :description "Powerful mobile anti-building siege weapon" ;
+                :hit_points 80 ;
+                :line_of_sight 14 ;
+                :minimum_range 5 ;
+                :movement_rate "0.7"^^xsd:float ;
+                :name "Bombard_Cannon" ;
+                :range 12 .
+
+_:genid18 :melee_armor 2 ;
+           :pierce_armor 5 .
+
+_:genid19 :bonus_buildings "200.0"^^xsd:float ;
+           :bonus_camels "40.0"^^xsd:float ;
+           :bonus_siege "20.0"^^xsd:float ;
+           :bonus_stone_defense "40.0"^^xsd:float .
+
+_:genid20 :gold "225.0"^^xsd:float ;
+           :wood "225.0"^^xsd:float .
+
+
+###  http://ex.org/Camel
+:Camel rdf:type owl:NamedIndividual ,
+                :Unit ,
+                owl:Thing ;
+       :age :Castle_Age ;
+       :created_in :Stable ;
+       :expansion :Age_Of_Kings ;
+       :upgrades_to :Heavy_Camel ;
+       :armor _:genid21 ;
+       :attack 5 ;
+       :attack_delay 0 ;
+       :bonus _:genid22 ;
+       :build_time 22 ;
+       :cost _:genid23 ;
+       :description "Excels at killing other mounted units. (not classified as cavalry)" ;
+       :hit_points 100 ;
+       :line_of_sight 4 ;
+       :movement_rate "1.45"^^xsd:float ;
+       :name "Camel" ;
+       :range 0 .
+
+_:genid21 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+_:genid22 :bonus_against_cavalry "10.0"^^xsd:float ;
+           :bonus_camels "5.0"^^xsd:float ;
+           :bonus_ships "5.0"^^xsd:float .
+
+_:genid23 :food "55.0"^^xsd:float ;
+           :gold "60.0"^^xsd:float .
+
+
+###  http://ex.org/Cannon_Galleon
+:Cannon_Galleon rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Dock ;
+                :expansion :Age_Of_Kings ;
+                :upgrades_to :Elite_Cannon_Galleon ;
+                :accuracy "50.0"^^xsd:float ;
+                :armor _:genid24 ;
+                :attack 35 ;
+                :attack_delay 0 ;
+                :bonus _:genid25 ;
+                :build_time 46 ;
+                :cost _:genid26 ;
+                :description "Long-range warship used to attack targets on shore to establish beachhead. Fires slowly and has minimum range" ;
+                :hit_points 120 ;
+                :line_of_sight 15 ;
+                :minimum_range 3 ;
+                :movement_rate "1.1"^^xsd:float ;
+                :name "Cannon_Galleon" ;
+                :range 13 .
+
+_:genid24 :melee_armor 0 ;
+           :pierce_armor 6 .
+
+_:genid25 :bonus_archers "15.0"^^xsd:float ;
+           :bonus_buildings "200.0"^^xsd:float ;
+           :bonus_cavalry "15.0"^^xsd:float ;
+           :bonus_infantry "15.0"^^xsd:float ;
+           :bonus_siege "40.0"^^xsd:float .
+
+_:genid26 :gold "150.0"^^xsd:float ;
+           :wood "200.0"^^xsd:float .
+
+
+###  http://ex.org/Capped_Ram
+:Capped_Ram rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Imperial_Age ;
+            :created_in :Siege_Workshop ;
+            :expansion :Age_Of_Kings ;
+            :upgraded_from :Battering_Ram ;
+            :upgrades_to :Siege_Ram ;
+            :armor _:genid27 ;
+            :attack 3 ;
+            :attack_delay 0 ;
+            :blast_radius "1.5"^^xsd:float ;
+            :bonus _:genid28 ;
+            :build_time 36 ;
+            :cost _:genid29 ;
+            :description "Upgraded Battering Ram. Can garrison 4 units (affects movement rate +0.05 per unit). Max speed at 0.7" ;
+            :hit_points 200 ;
+            :line_of_sight 3 ;
+            :movement_rate "0.5"^^xsd:float ;
+            :name "Capped_Ram" ;
+            :range 0 .
+
+_:genid27 :melee_armor 0 ;
+           :pierce_armor 190 .
+
+_:genid28 :bonus_buildings "150.0"^^xsd:float ;
+           :bonus_buildings_full "190.0"^^xsd:float ;
+           :bonus_siege "50.0"^^xsd:float ;
+           :bonus_with_siege_engineers_buildings "180.0"^^xsd:float ;
+           :bonus_with_siege_engineers_buildings_full "220.0"^^xsd:float .
+
+_:genid29 :gold "75.0"^^xsd:float ;
+           :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Castle
+:Castle rdf:type owl:NamedIndividual ,
+                 :Building ,
+                 owl:Thing .
+
+
+###  http://ex.org/Castle_Age
+:Castle_Age rdf:type owl:NamedIndividual ,
+                     :Age ,
+                     owl:Thing ;
+            :upgraded_from :Feudal_Age ;
+            :upgrades_to :Imperial_Age .
+
+
+###  http://ex.org/Cataphract
+:Cataphract rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Castle_Age ;
+            :created_in :Castle ;
+            :expansion :Age_Of_Kings ;
+            :upgrades_to :Elite_Cataphract ;
+            :armor _:genid30 ;
+            :attack 9 ;
+            :attack_delay 0 ;
+            :bonus [ :bonus_infantry "9.0"^^xsd:float
+                   ] ;
+            :build_time 20 ;
+            :cost _:genid32 ;
+            :description "Byzantine unique unit. Heavily armored cavalry" ;
+            :hit_points 110 ;
+            :line_of_sight 4 ;
+            :movement_rate "1.35"^^xsd:float ;
+            :name "Cataphract" ;
+            :range 0 .
+
+_:genid30 :melee_armor 2 ;
+           :pierce_armor 1 .
+
+_:genid32 :food "70.0"^^xsd:float ;
+           :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Cavalier
+:Cavalier rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Imperial_Age ;
+          :created_in :Stable ;
+          :expansion :Age_Of_Kings ;
+          :upgraded_from :Knight ;
+          :upgrades_to :Paladin ;
+          :armor _:genid33 ;
+          :attack 12 ;
+          :attack_delay 0 ;
+          :bonus [ ] ;
+:build_time 30 ;
+:cost _:genid35 ;
+:description "Upgraded Knight" ;
+:hit_points 120 ;
+:line_of_sight 4 ;
+:movement_rate "1.35"^^xsd:float ;
+:name "Cavalier" ;
+:range 0 .
+
+_:genid33 :melee_armor 2 ;
+           :pierce_armor 2 .
+
+_:genid35 :food "60.0"^^xsd:float ;
+           :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Cavalry_Archer
+:Cavalry_Archer rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Castle_Age ;
+                :created_in :Archery_Range ;
+                :expansion :Age_Of_Kings ;
+                :upgrades_to :Heavy_Cavalry_Archer ;
+                :accuracy "50.0"^^xsd:float ;
+                :armor _:genid36 ;
+                :attack 6 ;
+                :attack_delay "1.0"^^xsd:float ;
+                :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                       ] ;
+                :build_time 34 ;
+                :cost _:genid38 ;
+                :description "Fast with ranged attack. Ideal for hit-and-run attacks" ;
+                :hit_points 50 ;
+                :line_of_sight 5 ;
+                :movement_rate "1.4"^^xsd:float ;
+                :name "Cavalry_Archer" ;
+                :range 4 .
+
+_:genid36 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+_:genid38 :gold "70.0"^^xsd:float ;
+           :wood "40.0"^^xsd:float .
+
+
+###  http://ex.org/Champion
+:Champion rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Imperial_Age ;
+          :created_in :Barracks ;
+          :expansion :Age_Of_Kings ;
+          :upgraded_from :Two-Handed_Swordsman ;
+          :armor _:genid39 ;
+          :attack 13 ;
+          :attack_delay 0 ;
+          :bonus _:genid40 ;
+          :build_time 21 ;
+          :cost _:genid41 ;
+          :description "Upgraded Two-Handed Swordsman" ;
+          :hit_points 70 ;
+          :line_of_sight 5 ;
+          :movement_rate "0.9"^^xsd:float ;
+          :name "Champion" ;
+          :range 0 .
+
+_:genid39 :melee_armor 1 ;
+           :pierce_armor 1 .
+
+_:genid40 :bonus_buildings "3.0"^^xsd:float ;
+           :bonus_eagles "6.0"^^xsd:float .
+
+_:genid41 :food "60.0"^^xsd:float ;
+           :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Chu_Ko_NU
+:Chu_Ko_NU rdf:type owl:NamedIndividual ,
+                    owl:Thing ;
+           :upgrades_to :Elite_Chu_Ko_Nu .
+
+
+###  http://ex.org/Chu_Ko_Nu
+:Chu_Ko_Nu rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Castle_Age ;
+           :created_in :Castle ;
+           :expansion :Age_Of_Kings ;
+           :accuracy "85.0"^^xsd:float ;
+           :armor _:genid42 ;
+           :attack 8 ;
+           :attack_delay "0.21"^^xsd:float ;
+           :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                  ] ;
+           :build_time 19 ;
+           :cost _:genid44 ;
+           :description "Chinese unique unit. Archer with mediocre range. Shoots a volley of 2 extra arrows with 3 attack. Because of the multiple arrows the delay between starts of attacks is more (roughly 3.6)" ;
+           :hit_points 45 ;
+           :line_of_sight 6 ;
+           :movement_rate "0.96"^^xsd:float ;
+           :name "Chu_Ko_Nu" ;
+           :range 4 .
+
+_:genid42 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+_:genid44 :gold "35.0"^^xsd:float ;
+           :wood "40.0"^^xsd:float .
+
+
+###  http://ex.org/Conquistador
+:Conquistador rdf:type owl:NamedIndividual ,
+                       :Unit ,
+                       owl:Thing ;
+              :age :Castle_Age ;
+              :created_in :Castle ;
+              :expansion :Age_Of_Kings ;
+              :upgrades_to :Elite_Conquistador ;
+              :accuracy "65.0"^^xsd:float ;
+              :armor _:genid45 ;
+              :attack 16 ;
+              :attack_delay "0.4"^^xsd:float ;
+              :bonus [ :bonus_rams "4.0"^^xsd:float
+                     ] ;
+              :build_time 24 ;
+              :cost _:genid47 ;
+              :description "Spanish unique unit. Mounted Hand Cannoneer. Powerful close attack but inaccurate at range. (Only archer armor upgrades apply from blacksmith not range or attack)" ;
+              :hit_points 55 ;
+              :line_of_sight 8 ;
+              :movement_rate "1.3"^^xsd:float ;
+              :name "Conquistador" ;
+              :range 6 .
+
+_:genid45 :melee_armor 2 ;
+           :pierce_armor 2 .
+
+_:genid47 :food "60.0"^^xsd:float ;
+           :gold "70.0"^^xsd:float .
+
+
+###  http://ex.org/Crossbowman
+:Crossbowman rdf:type owl:NamedIndividual ,
+                      :Unit ,
+                      owl:Thing ;
+             :age :Castle_Age ;
+             :created_in :Archery_Range ;
+             :expansion :Age_Of_Kings ;
+             :upgraded_from :Archer ;
+             :upgrades_to :Arbalest ;
+             :accuracy "85.0"^^xsd:float ;
+             :armor _:genid48 ;
+             :attack 5 ;
+             :attack_delay "0.35"^^xsd:float ;
+             :bonus [ :bonus_spearmen "3.0"^^xsd:float
+                    ] ;
+             :build_time 27 ;
+             :cost _:genid50 ;
+             :description "Upgraded archer" ;
+             :hit_points 35 ;
+             :line_of_sight 7 ;
+             :movement_rate "0.96"^^xsd:float ;
+             :name "Crossbowman" ;
+             :range 5 .
+
+_:genid48 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+_:genid50 :gold "45.0"^^xsd:float ;
+           :wood "25.0"^^xsd:float .
+
+
+###  http://ex.org/Dark_Age
+:Dark_Age rdf:type owl:NamedIndividual ,
+                   :Age ,
+                   owl:Thing ;
+          :upgrades_to :Feudal_Age .
+
+
+###  http://ex.org/Deer
+:Deer rdf:type owl:NamedIndividual ,
+               :Animal ,
+               :Unit ,
+               owl:Thing ;
+      :age :Dark_Age ;
+      :created_in :Gaia ;
+      :expansion :Age_Of_Kings ;
+      :armor _:genid51 ;
+      :attack 0 ;
+      :attack_delay 0 ;
+      :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Wild deers running around" ;
+:hit_points 5 ;
+:line_of_sight 2 ;
+:movement_rate "0.737"^^xsd:float ;
+:name "Deer" ;
+:range 0 .
+
+_:genid51 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+
+###  http://ex.org/Demolition_Ship
+:Demolition_Ship rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Castle_Age ;
+                 :created_in :Dock ;
+                 :expansion :Age_Of_Kings ;
+                 :upgrades_to :Heavy_Demolition_Ship ;
+                 :armor _:genid54 ;
+                 :attack 110 ;
+                 :attack_delay 0 ;
+                 :blast_radius "2.5"^^xsd:float ;
+                 :bonus [ :bonus_buildings "220.0"^^xsd:float
+                        ] ;
+                 :build_time 31 ;
+                 :cost _:genid56 ;
+                 :description "Filled with explosives. Self-destructs when used. Pilot near enemy ships and detonate to wrest control of the sea from an entrenched opponent" ;
+                 :hit_points 50 ;
+                 :line_of_sight 6 ;
+                 :movement_rate "1.6"^^xsd:float ;
+                 :name "Demolition_Ship" ;
+                 :range 0 .
+
+_:genid54 :melee_armor 0 ;
+           :pierce_armor 3 .
+
+_:genid56 :gold "50.0"^^xsd:float ;
+           :wood "70.0"^^xsd:float .
+
+
+###  http://ex.org/Dock
+:Dock rdf:type owl:NamedIndividual ,
+               :Building ,
+               owl:Thing .
+
+
+###  http://ex.org/Eagle_Warrior
+:Eagle_Warrior rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Castle_Age ,
+                    :Dark_Age ;
+               :created_in :Barracks ;
+               :expansion :The_Conquerors ;
+               :upgrades_to :Elite_Eagle_Warrior ;
+               :armor _:genid57 ,
+                      _:genid58 ;
+               :attack 4 ,
+                       7 ;
+               :attack_delay 0 ;
+               :bonus _:genid59 ,
+                      _:genid60 ;
+               :build_time 0 ,
+                           35 ;
+               :cost [ ] ,
+_:genid62 ;
+:description "Fast infantry with extensive sight; resists conversion; attack bonus vs. Monks" ;
+:hit_points 50 ;
+:line_of_sight 6 ;
+:movement_rate "1.1"^^xsd:float ;
+:name "Eagle_Warrior" ;
+:range 0 .
+
+_:genid57 :melee_armor 0 ;
+           :pierce_armor 2 .
+
+_:genid58 :melee_armor 0 ;
+           :pierce_armor 2 .
+
+_:genid59 :bonus_monks "8.0"^^xsd:float ;
+           :bonus_siege "3.0"^^xsd:float .
+
+_:genid60 :bonus_camel "1.0"^^xsd:float ;
+           :bonus_cavalry "2.0"^^xsd:float ;
+           :bonus_monks "8.0"^^xsd:float ;
+           :bonus_ship "1.0"^^xsd:float ;
+           :bonus_siege "3.0"^^xsd:float .
+
+_:genid62 :food "20.0"^^xsd:float ;
+           :gold "50.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Berserk
+:Elite_Berserk rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Imperial_Age ;
+               :created_in :Castle ;
+               :expansion :Age_Of_Kings ;
+               :upgraded_from :Berserk ;
+               :armor _:genid63 ;
+               :attack 14 ;
+               :attack_delay 0 ;
+               :bonus _:genid64 ;
+               :build_time 16 ;
+               :cost _:genid65 ;
+               :description "Upgraded Berserk" ;
+               :hit_points 72 ;
+               :line_of_sight 5 ;
+               :movement_rate "1.05"^^xsd:float ;
+               :name "Elite_Berserk" ;
+               :range 0 .
+
+_:genid63 :melee_armor 2 ;
+           :pierce_armor 1 .
+
+_:genid64 :bonus_buildings "3.0"^^xsd:float ;
+           :bonus_eagles "3.0"^^xsd:float .
+
+_:genid65 :food "65.0"^^xsd:float ;
+           :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Cannon_Galleon
+:Elite_Cannon_Galleon rdf:type owl:NamedIndividual ,
+                               :Unit ,
+                               owl:Thing ;
+                      :age :Imperial_Age ;
+                      :created_in :Dock ;
+                      :expansion :Age_Of_Kings ;
+                      :upgraded_from :Cannon_Galleon ;
+                      :accuracy "50.0"^^xsd:float ;
+                      :armor _:genid66 ;
+                      :attack 45 ;
+                      :attack_delay 0 ;
+                      :bonus _:genid67 ;
+                      :build_time 46 ;
+                      :cost _:genid68 ;
+                      :description "Upgraded Cannon Galleon" ;
+                      :hit_points 150 ;
+                      :line_of_sight 17 ;
+                      :minimum_range 3 ;
+                      :movement_rate "1.1"^^xsd:float ;
+                      :name "Elite_Cannon_Galleon" ;
+                      :range 15 .
+
+_:genid66 :melee_armor 0 ;
+           :pierce_armor 8 .
+
+_:genid67 :bonus_archers "15.0"^^xsd:float ;
+           :bonus_buildings "275.0"^^xsd:float ;
+           :bonus_cavalry "15.0"^^xsd:float ;
+           :bonus_infantry "15.0"^^xsd:float ;
+           :bonus_siege "40.0"^^xsd:float .
+
+_:genid68 :gold "150.0"^^xsd:float ;
+           :wood "200.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Cataphract
+:Elite_Cataphract rdf:type owl:NamedIndividual ,
+                           :Unit ,
+                           owl:Thing ;
+                  :age :Imperial_Age ;
+                  :created_in :Castle ;
+                  :expansion :Age_Of_Kings ;
+                  :upgraded_from :Cataphract ;
+                  :armor _:genid69 ;
+                  :attack 12 ;
+                  :attack_delay 0 ;
+                  :bonus [ :bonus_infantry "12.0"^^xsd:float
+                         ] ;
+                  :build_time 20 ;
+                  :cost _:genid71 ;
+                  :description "Upgraded Cataphract" ;
+                  :hit_points 150 ;
+                  :line_of_sight 5 ;
+                  :movement_rate "1.35"^^xsd:float ;
+                  :name "Elite_Cataphract" ;
+                  :range 0 .
+
+_:genid69 :melee_armor 2 ;
+           :pierce_armor 1 .
+
+_:genid71 :food "70.0"^^xsd:float ;
+           :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Chu_Ko_Nu
+:Elite_Chu_Ko_Nu rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Imperial_Age ;
+                 :created_in :Castle ;
+                 :expansion :Age_Of_Kings ;
+                 :upgraded_from :Chu_Ko_NU ;
+                 :accuracy "85.0"^^xsd:float ;
+                 :armor _:genid72 ;
+                 :attack 8 ;
+                 :attack_delay "0.21"^^xsd:float ;
+                 :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                        ] ;
+                 :build_time 13 ;
+                 :cost _:genid74 ;
+                 :description "Upgraded Chu Ko NU" ;
+                 :hit_points 50 ;
+                 :line_of_sight 6 ;
+                 :movement_rate "0.96"^^xsd:float ;
+                 :name "Elite_Chu_Ko_Nu" ;
+                 :range 6 .
+
+_:genid72 :melee_armor 0 ;
+           :pierce_armor 0 .
+
+_:genid74 :gold "35.0"^^xsd:float ;
+           :wood "40.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Conquistador
+:Elite_Conquistador rdf:type owl:NamedIndividual ,
+                             :Unit ,
+                             owl:Thing ;
+                    :age :Imperial_Age ;
+                    :created_in :Castle ;
+                    :expansion :Age_Of_Kings ;
+                    :upgraded_from :Conquistador ;
+                    :accuracy "70.0"^^xsd:float ;
+                    :armor _:genid75 ;
+                    :attack 18 ;
+                    :attack_delay "0.4"^^xsd:float ;
+                    :bonus _:genid76 ;
+                    :build_time 24 ;
+                    :cost _:genid77 ;
+                    :description "Upgraded Conquistador" ;
+                    :hit_points 70 ;
+                    :line_of_sight 8 ;
+                    :movement_rate "1.3"^^xsd:float ;
+                    :name "Elite_Conquistador" ;
+                    :range 6 .
+
+_:genid75 :melee_armor 2 ;
+           :pierce_armor 2 .
+
+_:genid76 :bonus_buildings "2.0"^^xsd:float ;
+           :bonus_rams "6.0"^^xsd:float .
+
+_:genid77 :food "60.0"^^xsd:float ;
+           :gold "70.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Eagle_Warrior
+:Elite_Eagle_Warrior rdf:type owl:NamedIndividual ,
+                              :Unit ,
+                              owl:Thing ;
+                     :age :Imperial_Age ;
+                     :created_in :Barracks ;
+                     :expansion :The_Conquerors ;
+                     :upgraded_from :Eagle_Warrior ;
+                     :armor _:genid78 ;
+                     :attack 9 ;
+                     :attack_delay 0 ;
+                     :bonus _:genid79 ;
+                     :build_time 20 ;
+                     :cost _:genid80 ;
+                     :description "Upgraded Eagle Warrior" ;
+                     :hit_points 60 ;
+                     :line_of_sight 6 ;
+                     :movement_rate "1.3"^^xsd:float ;
+                     :name "Elite_Eagle_Warrior" ;
+                     :range 0 .
+
+_:genid78 :melee_armor 0 ;
+           :pierce_armor 4 .
+
+_:genid79 :bonus_camel "2.0"^^xsd:float ;
+           :bonus_cavalry "4.0"^^xsd:float ;
+           :bonus_monks "10.0"^^xsd:float ;
+           :bonus_ship "2.0"^^xsd:float ;
+           :bonus_siege "5.0"^^xsd:float .
+
+_:genid80 :food "20.0"^^xsd:float ;
+           :gold "50.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Huskarl
+:Elite_Huskarl rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Imperial_Age ;
+               :created_in :Castle ;
+               :expansion :Age_Of_Kings ;
+               :upgraded_from :Huskarl ;
+               :armor _:genid81 ;
+               :attack 12 ;
+               :attack_delay 0 ;
+               :bonus _:genid82 ;
+               :build_time 16 ;
+               :cost _:genid83 ;
+               :description "Upgraded Huskarl" ;
+               :hit_points 70 ;
+               :line_of_sight 5 ;
+               :movement_rate "1.05"^^xsd:float ;
+               :name "Elite_Huskarl" ;
+               :range 0 .
+
+_:genid81 :melee_armor 0 ;
+           :pierce_armor 8 .
+
+_:genid82 :bonus_archers "10.0"^^xsd:float ;
+           :bonus_buildings "3.0"^^xsd:float ;
+           :bonus_eagles "3.0"^^xsd:float ;
+           :bonus_hand_cannoneers "10.0"^^xsd:float .
+
+_:genid83 :food "52.0"^^xsd:float ;
+           :gold "26.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Jaguar_Warrior
+:Elite_Jaguar_Warrior rdf:type owl:NamedIndividual ,
+                               :Unit ,
+                               owl:Thing ;
+                      :age :Castle_Age ;
+                      :created_in :Castle ;
+                      :expansion :The_Conquerors ;
+                      :upgraded_from :Jaguar_Warrior ;
+                      :armor _:genid84 ;
+                      :attack 12 ;
+                      :attack_delay 0 ;
+                      :bonus _:genid85 ;
+                      :build_time 17 ;
+                      :cost _:genid86 ;
+                      :description "Upgraded Jaguar Warrior" ;
+                      :hit_points 75 ;
+                      :line_of_sight 5 ;
+                      :movement_rate "1.0"^^xsd:float ;
+                      :name "Elite_Jaguar_Warrior" ;
+                      :range 0 .
+
+_:genid84 :melee_armor 2 ;
+           :pierce_armor 0 .
+
+_:genid85 :bonus_buildings "2.0"^^xsd:float ;
+           :bonus_eagles "12.0"^^xsd:float ;
+           :bonus_infantry "10.0"^^xsd:float .
+
+_:genid86 :food "60.0"^^xsd:float ;
+           :gold "30.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Janissary
+:Elite_Janissary rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Imperial_Age ;
+                 :created_in :Castle ;
+                 :expansion :Age_Of_Kings ;
+                 :upgraded_from :Janissary ;
+                 :accuracy "50.0"^^xsd:float ;
+                 :armor _:genid87 ;
+                 :attack 22 ;
+                 :attack_delay 0 ;
+                 :bonus [ :bonus_rams "3.0"^^xsd:float
+                        ] ;
+                 :build_time 17 ;
+                 :cost _:genid89 ;
+                 :description "Upgraded Janissary" ;
+                 :hit_points 50 ;
+                 :line_of_sight 10 ;
+                 :movement_rate "0.96"^^xsd:float ;
+                 :name "Elite_Janissary" ;
+                 :range 8 .
+
+_:genid87 :melee_armor 2 ;
+           :pierce_armor 0 .
+
+_:genid89 :food "60.0"^^xsd:float ;
+           :gold "55.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Longboat
+:Elite_Longboat rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Dock ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Longboat ;
+                :accuracy "10.0"^^xsd:float ;
+                :armor _:genid90 ;
+                :attack 8 ;
+                :attack_delay 0 ;
+                :bonus _:genid91 ;
+                :build_time 25 ;
+                :cost _:genid92 ;
+                :description "Upgraded Longboat" ;
+                :hit_points 160 ;
+                :line_of_sight 9 ;
+                :movement_rate "1.54"^^xsd:float ;
+                :name "Elite_Longboat" ;
+                :range 7 .
+
+_:genid90 :melee_armor 0 ;
+           :pierce_armor 8 .
+
+_:genid91 :bonus_buildings "8.0"^^xsd:float ;
+           :bonus_rams "4.0"^^xsd:float ;
+           :bonus_ships "11.0"^^xsd:float .
+
+_:genid92 :gold "40.0"^^xsd:float ;
+           :wood "80.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Longbowman
+:Elite_Longbowman rdf:type owl:NamedIndividual ,
+                           :Unit ,
+                           owl:Thing ;
+                  :age :Imperial_Age ;
+                  :created_in :Castle ;
+                  :expansion :Age_Of_Kings ;
+                  :upgraded_from :Longbowman ;
+                  :accuracy "70.0"^^xsd:float ;
+                  :armor _:genid93 ;
+                  :attack 7 ;
+                  :attack_delay "0.35"^^xsd:float ;
+                  :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                         ] ;
+                  :build_time 19 ;
+                  :cost _:genid95 ;
+                  :description "Upgraded Longbowman" ;
+                  :hit_points 40 ;
+                  :line_of_sight 10 ;
+                  :movement_rate "0.96"^^xsd:float ;
+                  :name "Elite_Longbowman" ;
+                  :range 8 .
+
+_:genid93 :melee_armor 0 ;
+           :pierce_armor 1 .
+
+_:genid95 :gold "40.0"^^xsd:float ;
+           :wood "35.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Mameluke
+:Elite_Mameluke rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Castle ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Mameluke ;
+                :armor _:genid96 ;
+                :attack 10 ;
+                :attack_delay 0 ;
+                :bonus [ :bonus_cavalry "12.0"^^xsd:float
+                       ] ;
+                :build_time 23 ;
+                :cost _:genid98 ;
+                :description "Upgraded Mameluke" ;
+                :hit_points 80 ;
+                :line_of_sight 5 ;
+                :movement_rate "1.4"^^xsd:float ;
+                :name "Elite_Mameluke" ;
+                :range 3 .
+
+_:genid96 :melee_armor 1 ;
+           :pierce_armor 0 .
+
+_:genid98 :food "55.0"^^xsd:float ;
+           :gold "85.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Mangudai
+:Elite_Mangudai rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Castle ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Mangudai ;
+                :accuracy "95.0"^^xsd:float ;
+                :armor _:genid99 ;
+                :attack 8 ;
+                :attack_delay 0 ;
+                :bonus _:genid100 ;
+                :build_time 26 ;
+                :cost _:genid101 ;
+                :description "Upgraded Mangudai" ;
+                :hit_points 60 ;
+                :line_of_sight 6 ;
+                :movement_rate "1.45"^^xsd:float ;
+                :name "Elite_Mangudai" ;
+                :range 4 .
+
+_:genid99 :melee_armor 0 ;
+           :pierce_armor 1 .
+
+_:genid100 :bonus_siege "5.0"^^xsd:float ;
+            :bonus_spearmen "1.0"^^xsd:float .
+
+_:genid101 :gold "65.0"^^xsd:float ;
+            :wood "55.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Plumed_Archer
+:Elite_Plumed_Archer rdf:type owl:NamedIndividual ,
+                              :Unit ,
+                              owl:Thing ;
+                     :age :Castle_Age ;
+                     :created_in :Castle ;
+                     :expansion :The_Conquerors ;
+                     :upgraded_from :Plumed_Archer ;
+                     :accuracy "80.0"^^xsd:float ;
+                     :armor _:genid102 ;
+                     :attack 5 ;
+                     :attack_delay "0.5"^^xsd:float ;
+                     :bonus _:genid103 ;
+                     :build_time 16 ;
+                     :cost _:genid104 ;
+                     :description "Upgraded Plumed Archer" ;
+                     :hit_points 65 ;
+                     :line_of_sight 7 ;
+                     :movement_rate "1.2"^^xsd:float ;
+                     :name "Elite_Plumed_Archer" ;
+                     :range 5 .
+
+_:genid102 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+_:genid103 :bonus_infantry "2.0"^^xsd:float ;
+            :bonus_spearmen "2.0"^^xsd:float .
+
+_:genid104 :gold "32.0"^^xsd:float ;
+            :wood "32.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Samurai
+:Elite_Samurai rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Imperial_Age ;
+               :created_in :Castle ;
+               :expansion :Age_Of_Kings ;
+               :upgraded_from :Samurai ;
+               :armor _:genid105 ;
+               :attack 12 ;
+               :attack_delay 0 ;
+               :bonus _:genid106 ;
+               :build_time 9 ;
+               :cost _:genid107 ;
+               :description "Upgraded Samurai" ;
+               :hit_points 80 ;
+               :line_of_sight 5 ;
+               :movement_rate "1.0"^^xsd:float ;
+               :name "Elite_Samurai" ;
+               :range 0 .
+
+_:genid105 :melee_armor 1 ;
+            :pierce_armor 1 .
+
+_:genid106 :bonus_buildings "3.0"^^xsd:float ;
+            :bonus_eagles "3.0"^^xsd:float ;
+            :bonus_unique_units "12.0"^^xsd:float .
+
+_:genid107 :food "60.0"^^xsd:float ;
+            :gold "30.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Skirmisher
+:Elite_Skirmisher rdf:type owl:NamedIndividual ,
+                           :Unit ,
+                           owl:Thing ;
+                  :age :Castle_Age ;
+                  :created_in :Archery_Range ;
+                  :expansion :Age_Of_Kings ;
+                  :upgraded_from :Skirmisher ;
+                  :accuracy "90.0"^^xsd:float ;
+                  :armor _:genid108 ;
+                  :attack 3 ;
+                  :attack_delay "0.5"^^xsd:float ;
+                  :bonus _:genid109 ;
+                  :build_time 22 ;
+                  :cost _:genid110 ;
+                  :description "Upgraded skirmisher" ;
+                  :hit_points 35 ;
+                  :line_of_sight 7 ;
+                  :minimum_range 1 ;
+                  :movement_rate "0.96"^^xsd:float ;
+                  :name "Elite_Skirmisher" ;
+                  :range 5 .
+
+_:genid108 :melee_armor 0 ;
+            :pierce_armor 4 .
+
+_:genid109 :bonus_against_cavalry_archers "6.0"^^xsd:float ;
+            :bonus_archers "4.0"^^xsd:float ;
+            :bonus_conquistadors "4.0"^^xsd:float ;
+            :bonus_hand_cannon "4.0"^^xsd:float ;
+            :bonus_skirms "4.0"^^xsd:float ;
+            :bonus_spearmen "3.0"^^xsd:float .
+
+_:genid110 :food "25.0"^^xsd:float ;
+            :wood "35.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Tarkan
+:Elite_Tarkan rdf:type owl:NamedIndividual ,
+                       :Unit ,
+                       owl:Thing ;
+              :age :Castle_Age ;
+              :created_in :Castle ;
+              :expansion :The_Conquerors ;
+              :upgraded_from :Tarkan ;
+              :armor _:genid111 ;
+              :attack 11 ;
+              :attack_delay 0 ;
+              :bonus _:genid112 ;
+              :build_time 14 ;
+              :cost _:genid113 ;
+              :description "Upgraded Tarkan" ;
+              :hit_points 150 ;
+              :line_of_sight 7 ;
+              :movement_rate "1.35"^^xsd:float ;
+              :name "Elite_Tarkan" ;
+              :range 0 .
+
+_:genid111 :melee_armor 1 ;
+            :pierce_armor 3 .
+
+_:genid112 :bonus_buildings "10.0"^^xsd:float ;
+            :bonus_castle "10.0"^^xsd:float ;
+            :bonus_stone_defense "12.0"^^xsd:float ;
+            :bonus_walls_and_gates "10.0"^^xsd:float .
+
+_:genid113 :food "60.0"^^xsd:float ;
+            :gold "60.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Teutonic_Knight
+:Elite_Teutonic_Knight rdf:type owl:NamedIndividual ,
+                                :Unit ,
+                                owl:Thing ;
+                       :age :Imperial_Age ;
+                       :created_in :Castle ;
+                       :expansion :Age_Of_Kings ;
+                       :upgraded_from :Teutonic_Knight ;
+                       :armor _:genid114 ;
+                       :attack 17 ;
+                       :attack_delay 0 ;
+                       :bonus _:genid115 ;
+                       :build_time 12 ;
+                       :cost _:genid116 ;
+                       :description "Upgraded Teutonic Knight" ;
+                       :hit_points 100 ;
+                       :line_of_sight 5 ;
+                       :movement_rate "0.65"^^xsd:float ;
+                       :name "Elite_Teutonic_Knight" ;
+                       :range 0 .
+
+_:genid114 :melee_armor 10 ;
+            :pierce_armor 2 .
+
+_:genid115 :bonus_buildings "4.0"^^xsd:float ;
+            :bonus_eagles "4.0"^^xsd:float .
+
+_:genid116 :food "85.0"^^xsd:float ;
+            :gold "40.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Throwing_Axeman
+:Elite_Throwing_Axeman rdf:type owl:NamedIndividual ,
+                                :Unit ,
+                                owl:Thing ;
+                       :age :Imperial_Age ;
+                       :created_in :Castle ;
+                       :expansion :Age_Of_Kings ;
+                       :upgraded_from :Throwing_Axeman ;
+                       :armor _:genid117 ;
+                       :attack 8 ;
+                       :attack_delay "0.8"^^xsd:float ;
+                       :bonus _:genid118 ;
+                       :build_time 17 ;
+                       :cost _:genid119 ;
+                       :description "Upgraded Throwing Axeman" ;
+                       :hit_points 60 ;
+                       :line_of_sight 6 ;
+                       :movement_rate "0.9"^^xsd:float ;
+                       :name "Elite_Throwing_Axeman" ;
+                       :range 4 .
+
+_:genid117 :melee_armor 1 ;
+            :pierce_armor 0 .
+
+_:genid118 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "2.0"^^xsd:float .
+
+_:genid119 :food "55.0"^^xsd:float ;
+            :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Turtle_Ship
+:Elite_Turtle_Ship rdf:type owl:NamedIndividual ,
+                            :Unit ,
+                            owl:Thing ;
+                   :age :Imperial_Age ;
+                   :created_in :Dock ;
+                   :expansion :The_Conquerors ;
+                   :upgraded_from :Turtle_Ship ;
+                   :armor _:genid120 ;
+                   :attack 50 ;
+                   :attack_delay 0 ;
+                   :blast_radius "0.5"^^xsd:float ;
+                   :bonus [ ] ;
+:build_time 50 ;
+:cost _:genid122 ;
+:description "Upgraded Turtle Ship" ;
+:hit_points 300 ;
+:line_of_sight 8 ;
+:movement_rate "0.9"^^xsd:float ;
+:name "Elite_Turtle_Ship" ;
+:range 6 .
+
+_:genid120 :melee_armor 8 ;
+            :pierce_armor 6 .
+
+_:genid122 :gold "200.0"^^xsd:float ;
+            :wood "200.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_War_Elephant
+:Elite_War_Elephant rdf:type owl:NamedIndividual ,
+                             :Unit ,
+                             owl:Thing ;
+                    :age :Imperial_Age ;
+                    :created_in :Castle ;
+                    :expansion :Age_Of_Kings ;
+                    :upgraded_from :War_Elephant ;
+                    :armor _:genid123 ;
+                    :attack 20 ;
+                    :attack_delay 0 ;
+                    :bonus _:genid124 ;
+                    :build_time 31 ;
+                    :cost _:genid125 ;
+                    :description "Upgraded War Elephant" ;
+                    :hit_points 600 ;
+                    :line_of_sight 5 ;
+                    :movement_rate "0.6"^^xsd:float ;
+                    :name "Elite_War_Elephant" ;
+                    :range 0 .
+
+_:genid123 :melee_armor 1 ;
+            :pierce_armor 3 .
+
+_:genid124 :bonus_buildings "10.0"^^xsd:float ;
+            :bonus_stone_defense "10.0"^^xsd:float .
+
+_:genid125 :food "200.0"^^xsd:float ;
+            :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_War_Wagon
+:Elite_War_Wagon rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Imperial_Age ;
+                 :created_in :Castle ;
+                 :expansion :The_Conquerors ;
+                 :upgraded_from :War_Wagon ;
+                 :accuracy "10.0"^^xsd:float ;
+                 :armor _:genid126 ;
+                 :attack 9 ;
+                 :attack_delay "1.0"^^xsd:float ;
+                 :bonus [ :bonus_buildings "5.0"^^xsd:float
+                        ] ;
+                 :build_time 25 ;
+                 :cost _:genid128 ;
+                 :description "Upgraded War Wagon" ;
+                 :hit_points 200 ;
+                 :line_of_sight 8 ;
+                 :movement_rate "1.2"^^xsd:float ;
+                 :name "Elite_War_Wagon" ;
+                 :range 5 .
+
+_:genid126 :melee_armor 0 ;
+            :pierce_armor 4 .
+
+_:genid128 :gold "60.0"^^xsd:float ;
+            :wood "120.0"^^xsd:float .
+
+
+###  http://ex.org/Elite_Woad_Raider
+:Elite_Woad_Raider rdf:type owl:NamedIndividual ,
+                            :Unit ,
+                            owl:Thing ;
+                   :age :Imperial_Age ;
+                   :created_in :Castle ;
+                   :expansion :Age_Of_Kings ;
+                   :upgraded_from :Woad_Raider ;
+                   :armor _:genid129 ;
+                   :attack 13 ;
+                   :attack_delay 0 ;
+                   :bonus _:genid130 ;
+                   :build_time 10 ;
+                   :cost _:genid131 ;
+                   :description "Upgraded Woad Raider" ;
+                   :hit_points 80 ;
+                   :line_of_sight 5 ;
+                   :movement_rate "1.38"^^xsd:float ;
+                   :name "Elite_Woad_Raider" ;
+                   :range 0 .
+
+_:genid129 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid130 :bonus_buildings "3.0"^^xsd:float ;
+            :bonus_eagles "3.0"^^xsd:float .
+
+_:genid131 :food "65.0"^^xsd:float ;
+            :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Fast_Fire_Ship
+:Fast_Fire_Ship rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Dock ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Fire_Ship ;
+                :armor _:genid132 ;
+                :attack 3 ;
+                :attack_delay 0 ;
+                :bonus _:genid133 ;
+                :build_time 36 ;
+                :cost _:genid134 ;
+                :description "Upgraded Fire Ship" ;
+                :hit_points 120 ;
+                :line_of_sight 6 ;
+                :movement_rate "1.43"^^xsd:float ;
+                :name "Fast_Fire_Ship" .
+
+_:genid132 :melee_armor 0 ;
+            :pierce_armor 8 .
+
+_:genid133 :bonus_buildings "3.0"^^xsd:float ;
+            :bonus_camels "4.0"^^xsd:float ;
+            :bonus_melee "1.0"^^xsd:float ;
+            :bonus_ships "4.0"^^xsd:float ;
+            :bonus_turtle_ships "3.0"^^xsd:float .
+
+_:genid134 :gold "45.0"^^xsd:float ;
+            :wood "75.0"^^xsd:float .
+
+
+###  http://ex.org/Feudal_Age
+:Feudal_Age rdf:type owl:NamedIndividual ,
+                     :Age ,
+                     owl:Thing ;
+            :upgraded_from :Dark_Age ;
+            :upgrades_to :Castle_Age .
+
+
+###  http://ex.org/Fire_Ship
+:Fire_Ship rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Castle_Age ;
+           :created_in :Dock ;
+           :expansion :Age_Of_Kings ;
+           :upgrades_to :Fast_Fire_Ship ;
+           :armor _:genid135 ;
+           :attack 2 ;
+           :attack_delay 0 ;
+           :bonus _:genid136 ;
+           :build_time 36 ;
+           :cost _:genid137 ;
+           :description "Spews fire at other ships. Good at sinking galleys. Attack shows pierce attack" ;
+           :hit_points 100 ;
+           :line_of_sight 5 ;
+           :movement_rate "1.35"^^xsd:float ;
+           :name "Fire_Ship" .
+
+_:genid135 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid136 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_camels "3.0"^^xsd:float ;
+            :bonus_melee "1.0"^^xsd:float ;
+            :bonus_ships "3.0"^^xsd:float ;
+            :bonus_turtle_ships "2.0"^^xsd:float .
+
+_:genid137 :gold "45.0"^^xsd:float ;
+            :wood "75.0"^^xsd:float .
+
+
+###  http://ex.org/Fishing_Ship
+:Fishing_Ship rdf:type owl:NamedIndividual ,
+                       :Unit ,
+                       owl:Thing ;
+              :age :Dark_Age ;
+              :created_in :Dock ;
+              :expansion :Age_Of_Kings ;
+              :armor _:genid138 ;
+              :attack 0 ;
+              :attack_delay 0 ;
+              :bonus [ ] ;
+:build_time 40 ;
+:cost [ :wood "75.0"^^xsd:float
+      ] ;
+:description "Ship to harvest fish (resource)" ;
+:hit_points 60 ;
+:line_of_sight 5 ;
+:movement_rate "1.26"^^xsd:float ;
+:name "Fishing_Ship" ;
+:range 0 .
+
+_:genid138 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+
+###  http://ex.org/Gaia
+:Gaia rdf:type owl:NamedIndividual ,
+               owl:Thing .
+
+
+###  http://ex.org/Galleon
+:Galleon rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Imperial_Age ;
+         :created_in :Dock ;
+         :expansion :Age_Of_Kings ;
+         :upgraded_from :War_Galley ;
+         :armor _:genid141 ;
+         :attack 8 ;
+         :attack_delay 0 ;
+         :bonus _:genid142 ;
+         :build_time 36 ;
+         :cost _:genid143 ;
+         :description "Upgraded War Galley" ;
+         :hit_points 165 ;
+         :line_of_sight 9 ;
+         :movement_rate "1.43"^^xsd:float ;
+         :name "Galleon" ;
+         :range 7 .
+
+_:genid141 :melee_armor 0 ;
+            :pierce_armor 8 .
+
+_:genid142 :bonus_buildings "8.0"^^xsd:float ;
+            :bonus_camels "11.0"^^xsd:float ;
+            :bonus_rams "4.0"^^xsd:float ;
+            :bonus_ships "11.0"^^xsd:float .
+
+_:genid143 :gold "30.0"^^xsd:float ;
+            :wood "90.0"^^xsd:float .
+
+
+###  http://ex.org/Galley
+:Galley rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Feudal_Age ;
+        :created_in :Dock ;
+        :expansion :Age_Of_Kings ;
+        :upgrades_to :War_Galley ;
+        :armor _:genid144 ;
+        :attack 6 ;
+        :attack_delay 0 ;
+        :bonus _:genid145 ;
+        :build_time 60 ;
+        :cost _:genid146 ;
+        :description "Small and fast ship with weak attack. Used to scout the water and for early attacks on enemy fishing fleets" ;
+        :hit_points 120 ;
+        :line_of_sight 7 ;
+        :movement_rate "1.43"^^xsd:float ;
+        :name "Galley" ;
+        :range 5 .
+
+_:genid144 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid145 :bonus_buildings "6.0"^^xsd:float ;
+            :bonus_camels "8.0"^^xsd:float ;
+            :bonus_rams "3.0"^^xsd:float ;
+            :bonus_ships "8.0"^^xsd:float .
+
+_:genid146 :gold "30.0"^^xsd:float ;
+            :wood "90.0"^^xsd:float .
+
+
+###  http://ex.org/Halberdier
+:Halberdier rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Imperial_Age ;
+            :created_in :Barracks ;
+            :expansion :The_Conquerors ;
+            :upgraded_from :Pikeman ;
+            :armor _:genid147 ;
+            :attack 6 ;
+            :attack_delay 0 ;
+            :bonus _:genid148 ;
+            :build_time 22 ;
+            :cost _:genid149 ;
+            :description "Upgraded Pikeman" ;
+            :hit_points 60 ;
+            :line_of_sight 4 ;
+            :movement_rate "1.0"^^xsd:float ;
+            :name "Halberdier" ;
+            :range 0 .
+
+_:genid147 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid148 :bonus_buildings "1.0"^^xsd:float ;
+            :bonus_camels "16.0"^^xsd:float ;
+            :bonus_cavalry "32.0"^^xsd:float ;
+            :bonus_eagles "1.0"^^xsd:float ;
+            :bonus_ships "16.0"^^xsd:float ;
+            :bonus_war_elephants "60.0"^^xsd:float .
+
+_:genid149 :food "35.0"^^xsd:float ;
+            :wood "25.0"^^xsd:float .
+
+
+###  http://ex.org/Hand_Cannoneer
+:Hand_Cannoneer rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Archery_Range ;
+                :expansion :Age_Of_Kings ;
+                :accuracy "65.0"^^xsd:float ;
+                :armor _:genid150 ;
+                :attack 17 ;
+                :attack_delay "0.45"^^xsd:float ;
+                :bonus _:genid151 ;
+                :build_time 34 ;
+                :cost _:genid152 ;
+                :description "Powerful close attack; inaccurate at range. Attack bonus against spearman +11 in total" ;
+                :hit_points 35 ;
+                :line_of_sight 9 ;
+                :movement_rate "0.96"^^xsd:float ;
+                :name "Hand_Cannoneer" ;
+                :range 7 .
+
+_:genid150 :melee_armor 1 ;
+            :pierce_armor 0 .
+
+_:genid151 :bonus_infantry "10.0"^^xsd:float ;
+            :bonus_rams "2.0"^^xsd:float ;
+            :bonus_spearmen "1.0"^^xsd:float .
+
+_:genid152 :food "45.0"^^xsd:float ;
+            :gold "50.0"^^xsd:float .
+
+
+###  http://ex.org/Heavy_Camel
+:Heavy_Camel rdf:type owl:NamedIndividual ,
+                      :Unit ,
+                      owl:Thing ;
+             :age :Imperial_Age ;
+             :created_in :Stable ;
+             :expansion :Age_Of_Kings ;
+             :upgraded_from :Camel ;
+             :armor _:genid153 ;
+             :attack 7 ;
+             :attack_delay 0 ;
+             :bonus _:genid154 ;
+             :build_time 22 ;
+             :cost _:genid155 ;
+             :description "Upgraded Camel. Attack bonus vs. cavalry. (not classified as cavalry)" ;
+             :hit_points 120 ;
+             :line_of_sight 5 ;
+             :movement_rate "1.45"^^xsd:float ;
+             :name "Heavy_Camel" ;
+             :range 0 .
+
+_:genid153 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid154 :bonus_against_cavalry "18.0"^^xsd:float ;
+            :bonus_camels "9.0"^^xsd:float ;
+            :bonus_ships "9.0"^^xsd:float .
+
+_:genid155 :food "55.0"^^xsd:float ;
+            :gold "60.0"^^xsd:float .
+
+
+###  http://ex.org/Heavy_Cavalry_Archer
+:Heavy_Cavalry_Archer rdf:type owl:NamedIndividual ,
+                               :Unit ,
+                               owl:Thing ;
+                      :age :Imperial_Age ;
+                      :created_in :Archery_Range ;
+                      :expansion :Age_Of_Kings ;
+                      :upgraded_from :Cavalry_Archer ;
+                      :accuracy "50.0"^^xsd:float ;
+                      :armor _:genid156 ;
+                      :attack 7 ;
+                      :attack_delay "1.0"^^xsd:float ;
+                      :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                             ] ;
+                      :build_time 27 ;
+                      :cost _:genid158 ;
+                      :description "Upgraded Cavalry Archer" ;
+                      :hit_points 60 ;
+                      :line_of_sight 6 ;
+                      :movement_rate "1.4"^^xsd:float ;
+                      :name "Heavy_Cavalry_Archer" ;
+                      :range 4 .
+
+_:genid156 :melee_armor 1 ;
+            :pierce_armor 0 .
+
+_:genid158 :gold "70.0"^^xsd:float ;
+            :wood "40.0"^^xsd:float .
+
+
+###  http://ex.org/Heavy_Demolition_Ship
+:Heavy_Demolition_Ship rdf:type owl:NamedIndividual ,
+                                :Unit ,
+                                owl:Thing ;
+                       :age :Imperial_Age ;
+                       :created_in :Dock ;
+                       :expansion :Age_Of_Kings ;
+                       :upgraded_from :Demolition_Ship ;
+                       :armor _:genid159 ;
+                       :attack 140 ;
+                       :attack_delay 0 ;
+                       :blast_radius "3.5"^^xsd:float ;
+                       :bonus [ :bonus_buildings "280.0"^^xsd:float
+                              ] ;
+                       :build_time 31 ;
+                       :cost _:genid161 ;
+                       :description "Upgraded Demolition Ship" ;
+                       :hit_points 60 ;
+                       :line_of_sight 6 ;
+                       :movement_rate "1.6"^^xsd:float ;
+                       :name "Heavy_Demolition_Ship" ;
+                       :range 0 .
+
+_:genid159 :melee_armor 0 ;
+            :pierce_armor 3 .
+
+_:genid161 :gold "50.0"^^xsd:float ;
+            :wood "70.0"^^xsd:float .
+
+
+###  http://ex.org/Heavy_Scorpion
+:Heavy_Scorpion rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Imperial_Age ;
+                :created_in :Siege_Workshop ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Scorpion ;
+                :accuracy "10.0"^^xsd:float ;
+                :armor _:genid162 ;
+                :attack 16 ;
+                :attack_delay "0.21"^^xsd:float ;
+                :bonus _:genid163 ;
+                :build_time 30 ;
+                :cost _:genid164 ;
+                :description "Upgraded Scorpion" ;
+                :hit_points 50 ;
+                :line_of_sight 9 ;
+                :minimum_range 2 ;
+                :movement_rate "0.65"^^xsd:float ;
+                :name "Heavy_Scorpion" ;
+                :range 7 .
+
+_:genid162 :melee_armor 0 ;
+            :pierce_armor 7 .
+
+_:genid163 :bonus_buildings "4.0"^^xsd:float ;
+            :bonus_melee 0 ;
+            :bonus_rams "2.0"^^xsd:float ;
+            :bonus_war_elephants "8.0"^^xsd:float .
+
+_:genid164 :gold "75.0"^^xsd:float ;
+            :wood "75.0"^^xsd:float .
+
+
+###  http://ex.org/Horse
+:Horse rdf:type owl:NamedIndividual ,
+                :Animal ,
+                :Unit ,
+                owl:Thing ;
+       :age :Dark_Age ;
+       :created_in :Gaia ;
+       :expansion :Age_Of_Kings ;
+       :armor _:genid165 ;
+       :attack 0 ;
+       :attack_delay 0 ;
+       :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Can be used as scout" ;
+:hit_points 50 ;
+:line_of_sight 2 ;
+:movement_rate "1.2"^^xsd:float ;
+:name "Horse" ;
+:range 0 .
+
+_:genid165 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Huskarl
+:Huskarl rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Castle_Age ;
+         :created_in :Castle ;
+         :expansion :Age_Of_Kings ;
+         :upgrades_to :Elite_Huskarl ;
+         :armor _:genid168 ;
+         :attack 10 ;
+         :attack_delay 0 ;
+         :bonus _:genid169 ;
+         :build_time 16 ;
+         :cost _:genid170 ;
+         :description "Gothic unique unit. Infantry with substantial pierce armor; virtually immune to archer fire. Attack bonus vs. buildings and archers" ;
+         :hit_points 60 ;
+         :line_of_sight 3 ;
+         :movement_rate "1.05"^^xsd:float ;
+         :name "Huskarl" ;
+         :range 0 .
+
+_:genid168 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid169 :bonus_archers "6.0"^^xsd:float ;
+            :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "2.0"^^xsd:float ;
+            :bonus_hand_cannoneers "6.0"^^xsd:float .
+
+_:genid170 :food "52.0"^^xsd:float ;
+            :gold "26.0"^^xsd:float .
+
+
+###  http://ex.org/Hussar
+:Hussar rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Imperial_Age ;
+        :created_in :Stable ;
+        :expansion :The_Conquerors ;
+        :upgraded_from :Light_Cavalry ;
+        :armor _:genid171 ;
+        :attack 7 ;
+        :attack_delay 0 ;
+        :bonus [ :bonus_monks "12.0"^^xsd:float
+               ] ;
+        :build_time 30 ;
+        :cost [ :food "80.0"^^xsd:float
+              ] ;
+        :description "Upgraded Light Cavalry. +2 Line of sight per age" ;
+        :hit_points 75 ;
+        :line_of_sight 10 ;
+        :movement_rate "1.5"^^xsd:float ;
+        :name "Hussar" ;
+        :range 0 .
+
+_:genid171 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+
+###  http://ex.org/Imperial_Age
+:Imperial_Age rdf:type owl:NamedIndividual ,
+                       :Age ,
+                       owl:Thing ;
+              :upgraded_from :Castle_Age .
+
+
+###  http://ex.org/Jaguar
+:Jaguar rdf:type owl:NamedIndividual ,
+                 :Animal ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Dark_Age ;
+        :created_in :Gaia ;
+        :expansion :Age_Of_Kings ;
+        :armor _:genid174 ;
+        :attack 3 ;
+        :attack_delay 0 ;
+        :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Wild jaguar. Same as wolf on yucatan and other americas maps" ;
+:hit_points 25 ;
+:line_of_sight 12 ;
+:movement_rate "1.05"^^xsd:float ;
+:name "Jaguar" ;
+:range 0 .
+
+_:genid174 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Jaguar_Warrior
+:Jaguar_Warrior rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Castle_Age ;
+                :created_in :Castle ;
+                :expansion :The_Conquerors ;
+                :upgrades_to :Elite_Jaguar_Warrior ;
+                :armor _:genid177 ;
+                :attack 10 ;
+                :attack_delay 0 ;
+                :bonus _:genid178 ;
+                :build_time 17 ;
+                :cost _:genid179 ;
+                :description "Aztec unique unit. Attack bonus vs. other infantry" ;
+                :hit_points 50 ;
+                :line_of_sight 3 ;
+                :movement_rate "1.0"^^xsd:float ;
+                :name "Jaguar_Warrior" ;
+                :range 0 .
+
+_:genid177 :melee_armor 1 ;
+            :pierce_armor 0 .
+
+_:genid178 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "12.0"^^xsd:float ;
+            :bonus_infantry "10.0"^^xsd:float .
+
+_:genid179 :food "60.0"^^xsd:float ;
+            :gold "30.0"^^xsd:float .
+
+
+###  http://ex.org/Janissary
+:Janissary rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Castle_Age ;
+           :created_in :Castle ;
+           :expansion :Age_Of_Kings ;
+           :upgrades_to :Elite_Janissary ;
+           :accuracy "50.0"^^xsd:float ;
+           :armor _:genid180 ;
+           :attack 17 ;
+           :attack_delay "0.28"^^xsd:float ;
+           :bonus [ :bonus_rams "2.0"^^xsd:float
+                  ] ;
+           :build_time 17 ;
+           :cost _:genid182 ;
+           :description "Turkish unique unit. Hand Cannoneer with longer range and no minimum range" ;
+           :hit_points 44 ;
+           :line_of_sight 10 ;
+           :movement_rate "0.96"^^xsd:float ;
+           :name "Janissary" ;
+           :range 8 .
+
+_:genid180 :melee_armor 1 ;
+            :pierce_armor 0 .
+
+_:genid182 :food "60.0"^^xsd:float ;
+            :gold "55.0"^^xsd:float .
+
+
+###  http://ex.org/King
+:King rdf:type owl:NamedIndividual ,
+               :Unit ,
+               owl:Thing ;
+      :age :Dark_Age ;
+      :created_in :Castle ;
+      :expansion :Age_Of_Kings ;
+      :armor _:genid183 ;
+      :attack 0 ;
+      :attack_delay 0 ;
+      :bonus [ ] ;
+:build_time 30 ;
+:cost [ :food "50.0"^^xsd:float
+      ] ;
+:description "Cannot be produced so the cost and build time just for the sake of interest" ;
+:hit_points 75 ;
+:line_of_sight 6 ;
+:movement_rate "1.32"^^xsd:float ;
+:name "King" ;
+:range 0 .
+
+_:genid183 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Knight
+:Knight rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Castle_Age ;
+        :created_in :Stable ;
+        :expansion :Age_Of_Kings ;
+        :upgrades_to :Cavalier ;
+        :armor _:genid186 ;
+        :attack 10 ;
+        :attack_delay 0 ;
+        :bonus [ ] ;
+:build_time 30 ;
+:cost _:genid188 ;
+:description "Fast and heavy cavalry" ;
+:hit_points 100 ;
+:line_of_sight 4 ;
+:movement_rate "1.35"^^xsd:float ;
+:name "Knight" ;
+:range 0 .
+
+_:genid186 :melee_armor 2 ;
+            :pierce_armor 2 .
+
+_:genid188 :food "60.0"^^xsd:float ;
+            :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Light_Cavalry
+:Light_Cavalry rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Castle_Age ;
+               :created_in :Stable ;
+               :expansion :Age_Of_Kings ;
+               :upgraded_from :Scout_Cavalry ;
+               :upgrades_to :Hussar ;
+               :armor _:genid189 ;
+               :attack 7 ;
+               :attack_delay 0 ;
+               :bonus [ :bonus_monks "10.0"^^xsd:float
+                      ] ;
+               :build_time 30 ;
+               :cost [ :food "80.0"^^xsd:float
+                     ] ;
+               :description "Upgraded scout cavalry. +2 Line of sight per age" ;
+               :hit_points 60 ;
+               :line_of_sight 8 ;
+               :movement_rate "1.5"^^xsd:float ;
+               :name "Light_Cavalry" ;
+               :range 0 .
+
+_:genid189 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+
+###  http://ex.org/Long_Swordsman
+:Long_Swordsman rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Castle_Age ;
+                :created_in :Barracks ;
+                :expansion :Age_Of_Kings ;
+                :upgraded_from :Man-at-Arms ;
+                :upgrades_to :Two-Handed_Swordsman ;
+                :armor _:genid192 ;
+                :attack 9 ;
+                :attack_delay 0 ;
+                :bonus _:genid193 ;
+                :build_time 21 ;
+                :cost _:genid194 ;
+                :description "Upgraded Man-at-Arms" ;
+                :hit_points 55 ;
+                :line_of_sight 4 ;
+                :movement_rate "0.9"^^xsd:float ;
+                :name "Long_Swordsman" ;
+                :range 0 .
+
+_:genid192 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid193 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "4.0"^^xsd:float .
+
+_:genid194 :food "60.0"^^xsd:float ;
+            :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Longboat
+:Longboat rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Castle_Age ;
+          :created_in :Dock ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Elite_Longboat ;
+          :accuracy "10.0"^^xsd:float ;
+          :armor _:genid195 ;
+          :attack 7 ;
+          :attack_delay "9.0"^^xsd:float ;
+          :bonus _:genid196 ;
+          :build_time 25 ;
+          :cost _:genid197 ;
+          :description "Viking unique unit. Fires multiple arrows. volley of 4 arrows (7-1-1-1). Castle needed. Because of the multiple arrows the delay between starts of attacks is roughly 3.34" ;
+          :hit_points 130 ;
+          :line_of_sight 8 ;
+          :movement_rate "1.54"^^xsd:float ;
+          :name "Longboat" ;
+          :range 6 .
+
+_:genid195 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid196 :bonus_buildings "7.0"^^xsd:float ;
+            :bonus_rams "4.0"^^xsd:float ;
+            :bonus_ships "9.0"^^xsd:float .
+
+_:genid197 :gold "40.0"^^xsd:float ;
+            :wood "80.0"^^xsd:float .
+
+
+###  http://ex.org/Longbowman
+:Longbowman rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Castle_Age ;
+            :created_in :Castle ;
+            :expansion :Age_Of_Kings ;
+            :upgrades_to :Elite_Longbowman ;
+            :accuracy "70.0"^^xsd:float ;
+            :armor _:genid198 ;
+            :attack 6 ;
+            :attack_delay "0.35"^^xsd:float ;
+            :bonus [ :bonus_spearmen "2.0"^^xsd:float
+                   ] ;
+            :build_time 19 ;
+            :cost _:genid200 ;
+            :description "British unique unit. Powerful archer with long range" ;
+            :hit_points 35 ;
+            :line_of_sight 8 ;
+            :movement_rate "0.96"^^xsd:float ;
+            :name "Longbowman" ;
+            :range 6 .
+
+_:genid198 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid200 :gold "40.0"^^xsd:float ;
+            :wood "35.0"^^xsd:float .
+
+
+###  http://ex.org/Mameluke
+:Mameluke rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Castle_Age ;
+          :created_in :Castle ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Elite_Mameluke ;
+          :armor _:genid201 ;
+          :attack 7 ;
+          :attack_delay "0.6"^^xsd:float ;
+          :bonus [ :bonus_cavalry "9.0"^^xsd:float
+                 ] ;
+          :build_time 23 ;
+          :cost _:genid203 ;
+          :description "Saracen unique unit. Camel with hand-to-hand attack at distance. Excels vs. other mounted units" ;
+          :hit_points 65 ;
+          :line_of_sight 5 ;
+          :movement_rate "1.4"^^xsd:float ;
+          :name "Mameluke" ;
+          :range 3 .
+
+_:genid201 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid203 :food "55.0"^^xsd:float ;
+            :gold "85.0"^^xsd:float .
+
+
+###  http://ex.org/Man-at-Arms
+:Man-at-Arms rdf:type owl:NamedIndividual ,
+                      :Unit ,
+                      owl:Thing ;
+             :age :Feudal_Age ;
+             :created_in :Barracks ;
+             :expansion :Age_Of_Kings ;
+             :upgraded_from :Militia ;
+             :upgrades_to :Long_Swordsman ;
+             :armor _:genid204 ;
+             :attack 6 ;
+             :attack_delay 0 ;
+             :bonus _:genid205 ;
+             :build_time 21 ;
+             :cost _:genid206 ;
+             :description "Upgraded Militia. Attack bonus vs. buildings" ;
+             :hit_points 45 ;
+             :line_of_sight 4 ;
+             :movement_rate "0.9"^^xsd:float ;
+             :name "Man-at-Arms" ;
+             :range 0 .
+
+_:genid204 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid205 :bonus_buildings "1.0"^^xsd:float ;
+            :bonus_eagles "2.0"^^xsd:float .
+
+_:genid206 :food "60.0"^^xsd:float ;
+            :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Mangonel
+:Mangonel rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Castle_Age ;
+          :created_in :Siege_Workshop ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Onager ;
+          :armor _:genid207 ;
+          :attack 40 ;
+          :attack_delay 0 ;
+          :blast_radius "1.0"^^xsd:float ;
+          :bonus _:genid208 ;
+          :build_time 46 ;
+          :cost _:genid209 ;
+          :description "Wheeled siege weapon used to attack a small mass of units. Area of effect attack. Can attack ground. Weak vs. close nonranged units" ;
+          :hit_points 50 ;
+          :line_of_sight 9 ;
+          :minimum_range 3 ;
+          :movement_rate "0.6"^^xsd:float ;
+          :name "Mangonel" ;
+          :range 7 .
+
+_:genid207 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid208 :bonus_buildings "35.0"^^xsd:float ;
+            :bonus_siege "12.0"^^xsd:float .
+
+_:genid209 :gold "135.0"^^xsd:float ;
+            :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Mangudai
+:Mangudai rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Castle_Age ;
+          :created_in :Castle ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Elite_Mangudai ;
+          :accuracy "95.0"^^xsd:float ;
+          :armor _:genid210 ;
+          :attack 6 ;
+          :attack_delay "1.0"^^xsd:float ;
+          :bonus _:genid211 ;
+          :build_time 26 ;
+          :cost _:genid212 ;
+          :description "Mongol unique unit. Cavalry archer with attack bonus vs. siege weapons" ;
+          :hit_points 60 ;
+          :line_of_sight 6 ;
+          :movement_rate "1.45"^^xsd:float ;
+          :name "Mangudai" ;
+          :range 4 .
+
+_:genid210 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid211 :bonus_siege "3.0"^^xsd:float ;
+            :bonus_spearmen "1.0"^^xsd:float .
+
+_:genid212 :gold "65.0"^^xsd:float ;
+            :wood "55.0"^^xsd:float .
+
+
+###  http://ex.org/Market
+:Market rdf:type owl:NamedIndividual ,
+                 :Building ,
+                 owl:Thing .
+
+
+###  http://ex.org/Militia
+:Militia rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Dark_Age ;
+         :created_in :Barracks ;
+         :expansion :Age_Of_Kings ;
+         :upgrades_to :Man-at-Arms ;
+         :armor _:genid213 ;
+         :attack 4 ;
+         :attack_delay 0 ;
+         :bonus [ ] ;
+:build_time 21 ;
+:cost _:genid215 ;
+:description "Basic infantry swordsman. Quick and cheap to create" ;
+:hit_points 40 ;
+:line_of_sight 4 ;
+:movement_rate "0.9"^^xsd:float ;
+:name "Militia" ;
+:range 0 .
+
+_:genid213 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid215 :food "60.0"^^xsd:float ;
+            :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Missionary
+:Missionary rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Castle_Age ;
+            :created_in :Monastery ;
+            :expansion :Age_Of_Kings ;
+            :armor _:genid216 ;
+            :attack 0 ;
+            :attack_delay 0 ;
+            :bonus [ ] ;
+:build_time 51 ;
+:cost [ :gold "100.0"^^xsd:float
+      ] ;
+:description "Spanish unique unit. Mounted monk" ;
+:hit_points 30 ;
+:line_of_sight 9 ;
+:movement_rate "1.1"^^xsd:float ;
+:name "Missionary" .
+
+_:genid216 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Monastery
+:Monastery rdf:type owl:NamedIndividual ,
+                    :Building ,
+                    owl:Thing .
+
+
+###  http://ex.org/Monk
+:Monk rdf:type owl:NamedIndividual ,
+               :Unit ,
+               owl:Thing ;
+      :age :Castle_Age ;
+      :created_in :Monastery ;
+      :expansion :Age_Of_Kings ;
+      :armor _:genid219 ;
+      :attack 0 ;
+      :attack_delay 0 ;
+      :bonus [ ] ;
+:build_time 51 ;
+:cost [ :gold "100.0"^^xsd:float
+      ] ;
+:description "Slow and weak. Converts enemy units and ships to your civilization (player color). Heals wounded villagers and military units (except siege weapons)" ;
+:hit_points 30 ;
+:line_of_sight 11 ;
+:movement_rate "0.7"^^xsd:float ;
+:name "Monk" .
+
+_:genid219 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Onager
+:Onager rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Imperial_Age ;
+        :created_in :Siege_Workshop ;
+        :expansion :Age_Of_Kings ;
+        :upgraded_from :Mangonel ;
+        :upgrades_to :Siege_Onager ;
+        :armor _:genid222 ;
+        :attack 50 ;
+        :attack_delay 0 ;
+        :blast_radius "1.25"^^xsd:float ;
+        :bonus _:genid223 ;
+        :build_time 46 ;
+        :cost _:genid224 ;
+        :description "Upgraded Mangonel" ;
+        :hit_points 60 ;
+        :line_of_sight 10 ;
+        :minimum_range 3 ;
+        :movement_rate "0.6"^^xsd:float ;
+        :name "Onager" ;
+        :range 8 .
+
+_:genid222 :melee_armor 0 ;
+            :pierce_armor 7 .
+
+_:genid223 :bonus_buildings "45.0"^^xsd:float ;
+            :bonus_siege "12.0"^^xsd:float .
+
+_:genid224 :gold "135.0"^^xsd:float ;
+            :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Paladin
+:Paladin rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Imperial_Age ;
+         :created_in :Stable ;
+         :expansion :Age_Of_Kings ;
+         :upgraded_from :Cavalier ;
+         :armor _:genid225 ;
+         :attack 14 ;
+         :attack_delay 0 ;
+         :bonus [ ] ;
+:build_time 30 ;
+:cost _:genid227 ;
+:description "Upgraded Cavalier" ;
+:hit_points 160 ;
+:line_of_sight 5 ;
+:movement_rate "1.35"^^xsd:float ;
+:name "Paladin" ;
+:range 0 .
+
+_:genid225 :melee_armor 2 ;
+            :pierce_armor 3 .
+
+_:genid227 :food "60.0"^^xsd:float ;
+            :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/Petard
+:Petard rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Castle_Age ;
+        :created_in :Castle ;
+        :expansion :The_Conquerors ;
+        :armor _:genid228 ;
+        :attack 25 ;
+        :attack_delay 0 ;
+        :blast_radius "0.5"^^xsd:float ;
+        :bonus _:genid229 ;
+        :build_time 25 ;
+        :cost _:genid230 ;
+        :description "Demolition infantry unit armed with explosives. Bonuses add up - for example against walls and gates: +500 buildings +900 walls = +1400 bonus attack" ;
+        :hit_points 50 ;
+        :line_of_sight 4 ;
+        :movement_rate "0.8"^^xsd:float ;
+        :name "Petard" ;
+        :range 0 .
+
+_:genid228 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+_:genid229 :bonus_buildings "500.0"^^xsd:float ;
+            :bonus_castle "100.0"^^xsd:float ;
+            :bonus_siege "60.0"^^xsd:float ;
+            :bonus_walls_and_gates "900.0"^^xsd:float .
+
+_:genid230 :food "80.0"^^xsd:float ;
+            :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Pikeman
+:Pikeman rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Castle_Age ;
+         :created_in :Barracks ;
+         :expansion :Age_Of_Kings ;
+         :upgraded_from :Spearman ;
+         :upgrades_to :Halberdier ;
+         :armor _:genid231 ;
+         :attack 4 ;
+         :attack_delay 0 ;
+         :bonus _:genid232 ;
+         :build_time 22 ;
+         :cost _:genid233 ;
+         :description "Upgraded Spearman" ;
+         :hit_points 55 ;
+         :line_of_sight 4 ;
+         :movement_rate "1.0"^^xsd:float ;
+         :name "Pikeman" ;
+         :range 0 .
+
+_:genid231 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid232 :bonus_buildings "1.0"^^xsd:float ;
+            :bonus_camels "11.0"^^xsd:float ;
+            :bonus_cavalry "22.0"^^xsd:float ;
+            :bonus_eagles "1.0"^^xsd:float ;
+            :bonus_ships "11.0"^^xsd:float ;
+            :bonus_war_elephants "47.0"^^xsd:float .
+
+_:genid233 :food "35.0"^^xsd:float ;
+            :wood "25.0"^^xsd:float .
+
+
+###  http://ex.org/Plumed_Archer
+:Plumed_Archer rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Castle_Age ;
+               :created_in :Castle ;
+               :expansion :The_Conquerors ;
+               :upgrades_to :Elite_Plumed_Archer ;
+               :accuracy "80.0"^^xsd:float ;
+               :armor _:genid234 ;
+               :attack 5 ;
+               :attack_delay "0.5"^^xsd:float ;
+               :bonus _:genid235 ;
+               :build_time 16 ;
+               :cost _:genid236 ;
+               :description "Mayan unique unit. Strong fast and well-armored archer with less attack than other archers" ;
+               :hit_points 50 ;
+               :line_of_sight 6 ;
+               :movement_rate "1.2"^^xsd:float ;
+               :name "Plumed_Archer" ;
+               :range 4 .
+
+_:genid234 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid235 :bonus_infantry "1.0"^^xsd:float ;
+            :bonus_spearmen "2.0"^^xsd:float .
+
+_:genid236 :gold "37.0"^^xsd:float ;
+            :wood "37.0"^^xsd:float .
+
+
+###  http://ex.org/Samurai
+:Samurai rdf:type owl:NamedIndividual ,
+                  :Unit ,
+                  owl:Thing ;
+         :age :Castle_Age ;
+         :created_in :Castle ;
+         :expansion :Age_Of_Kings ;
+         :upgrades_to :Elite_Samurai ;
+         :armor _:genid237 ;
+         :attack 8 ;
+         :attack_delay 0 ;
+         :bonus _:genid238 ;
+         :build_time 9 ;
+         :cost _:genid239 ;
+         :description "Japanese unique unit. Infantry with fast attack. Attack bonus vs. other unique units and buildings" ;
+         :hit_points 60 ;
+         :line_of_sight 4 ;
+         :movement_rate "1.0"^^xsd:float ;
+         :name "Samurai" ;
+         :range 0 .
+
+_:genid237 :melee_armor 1 ;
+            :pierce_armor 1 .
+
+_:genid238 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "2.0"^^xsd:float ;
+            :bonus_unique_units "10.0"^^xsd:float .
+
+_:genid239 :food "60.0"^^xsd:float ;
+            :gold "30.0"^^xsd:float .
+
+
+###  http://ex.org/Scorpion
+:Scorpion rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Castle_Age ;
+          :created_in :Siege_Workshop ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Heavy_Scorpion ;
+          :accuracy "10.0"^^xsd:float ;
+          :armor _:genid240 ;
+          :attack 12 ;
+          :attack_delay "0.21"^^xsd:float ;
+          :bonus _:genid241 ;
+          :build_time 30 ;
+          :cost _:genid242 ;
+          :description "Damage to all units in the path" ;
+          :hit_points 40 ;
+          :line_of_sight 9 ;
+          :minimum_range 2 ;
+          :movement_rate "0.65"^^xsd:float ;
+          :name "Scorpion" ;
+          :range 7 .
+
+_:genid240 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid241 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_melee 0 ;
+            :bonus_rams "1.0"^^xsd:float ;
+            :bonus_war_elephants "6.0"^^xsd:float .
+
+_:genid242 :gold "75.0"^^xsd:float ;
+            :wood "75.0"^^xsd:float .
+
+
+###  http://ex.org/Scout_Cavalry
+:Scout_Cavalry rdf:type owl:NamedIndividual ,
+                        :Unit ,
+                        owl:Thing ;
+               :age :Dark_Age ,
+                    :Feudal_Age ;
+               :created_in :Stable ;
+               :expansion :Age_Of_Kings ;
+               :upgrades_to :Light_Cavalry ;
+               :armor _:genid243 ,
+                      _:genid244 ;
+               :attack 3 ,
+                       5 ;
+               :attack_delay 0 ;
+               :bonus [ :bonus_monks "6.0"^^xsd:float
+                      ] ,
+                      [ :bonus_monks "6.0"^^xsd:float
+                      ] ;
+               :build_time 0 ,
+                           30 ;
+               :cost [ ] ,
+[ :food "80.0"^^xsd:float
+] ;
+:description "Fast with extensive line of sight. Resistant to conversion +2 Line of sight per age" ,
+             "Fast with extensive line of sight. Resistant to conversion and +2 Line of sight per age" ;
+:hit_points 45 ;
+:line_of_sight 4 ,
+               6 ;
+:movement_rate "1.2"^^xsd:float ,
+               "1.55"^^xsd:float ;
+:name "Scout_Cavalry" ;
+:range 0 .
+
+_:genid243 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+_:genid244 :melee_armor 0 ;
+            :pierce_armor 2 .
+
+
+###  http://ex.org/Sheep
+:Sheep rdf:type owl:NamedIndividual ,
+                :Animal ,
+                :Unit ,
+                owl:Thing ;
+       :age :Dark_Age ;
+       :created_in :Gaia ;
+       :expansion :Age_Of_Kings ;
+       :armor _:genid249 ;
+       :attack 0 ;
+       :attack_delay 0 ;
+       :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Can be picked up by player and used to scout" ;
+:hit_points 7 ;
+:line_of_sight 3 ;
+:movement_rate "0.7"^^xsd:float ;
+:name "Sheep" ;
+:range 0 .
+
+_:genid249 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Siege_Onager
+:Siege_Onager rdf:type owl:NamedIndividual ,
+                       :Unit ,
+                       owl:Thing ;
+              :age :Imperial_Age ;
+              :created_in :Siege_Workshop ;
+              :expansion :Age_Of_Kings ;
+              :upgraded_from :Onager ;
+              :armor _:genid252 ;
+              :attack 75 ;
+              :attack_delay 0 ;
+              :blast_radius "1.5"^^xsd:float ;
+              :bonus _:genid253 ;
+              :build_time 46 ;
+              :cost _:genid254 ;
+              :description "Upgraded Onager" ;
+              :hit_points 70 ;
+              :line_of_sight 10 ;
+              :minimum_range 3 ;
+              :movement_rate "0.6"^^xsd:float ;
+              :name "Siege_Onager" ;
+              :range 8 .
+
+_:genid252 :melee_armor 0 ;
+            :pierce_armor 8 .
+
+_:genid253 :bonus_buildings "60.0"^^xsd:float ;
+            :bonus_siege "12.0"^^xsd:float .
+
+_:genid254 :gold "135.0"^^xsd:float ;
+            :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Siege_Ram
+:Siege_Ram rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Imperial_Age ;
+           :created_in :Siege_Workshop ;
+           :expansion :Age_Of_Kings ;
+           :upgraded_from :Capped_Ram ;
+           :armor _:genid255 ;
+           :attack 4 ;
+           :attack_delay 0 ;
+           :blast_radius "2.0"^^xsd:float ;
+           :bonus _:genid256 ;
+           :build_time 36 ;
+           :cost _:genid257 ;
+           :description "Upgraded Capped Ram. Can garrison 6 units (affects movement rate +0.05 per unit)" ;
+           :hit_points 270 ;
+           :line_of_sight 3 ;
+           :movement_rate "0.6"^^xsd:float ;
+           :name "Siege_Ram" ;
+           :range 0 .
+
+_:genid255 :melee_armor 0 ;
+            :pierce_armor 195 .
+
+_:genid256 :bonus_buildings "200.0"^^xsd:float ;
+            :bonus_buildings_full "260.0"^^xsd:float ;
+            :bonus_siege "65.0"^^xsd:float ;
+            :bonus_with_siege_engineers_buildings "240.0"^^xsd:float ;
+            :bonus_with_siege_engineers_buildings_full "300.0"^^xsd:float .
+
+_:genid257 :gold "75.0"^^xsd:float ;
+            :wood "160.0"^^xsd:float .
+
+
+###  http://ex.org/Siege_Workshop
+:Siege_Workshop rdf:type owl:NamedIndividual ,
+                         :Building ,
+                         owl:Thing .
+
+
+###  http://ex.org/Skirmisher
+:Skirmisher rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Feudal_Age ;
+            :created_in :Archery_Range ;
+            :expansion :Age_Of_Kings ;
+            :upgrades_to :Elite_Skirmisher ;
+            :accuracy "90.0"^^xsd:float ;
+            :armor _:genid258 ;
+            :attack 2 ;
+            :attack_delay "0.5"^^xsd:float ;
+            :bonus _:genid259 ;
+            :build_time 22 ;
+            :cost _:genid260 ;
+            :description "Ranged unit equipped with armor vs. archer attacks" ;
+            :hit_points 30 ;
+            :line_of_sight 6 ;
+            :minimum_range 1 ;
+            :movement_rate "0.96"^^xsd:float ;
+            :name "Skirmisher" ;
+            :range 4 .
+
+_:genid258 :melee_armor 0 ;
+            :pierce_armor 3 .
+
+_:genid259 :bonus_archers "3.0"^^xsd:float ;
+            :bonus_conquistadors "3.0"^^xsd:float ;
+            :bonus_hand_cannon "3.0"^^xsd:float ;
+            :bonus_skirms "3.0"^^xsd:float ;
+            :bonus_spearmen "3.0"^^xsd:float .
+
+_:genid260 :food "25.0"^^xsd:float ;
+            :wood "35.0"^^xsd:float .
+
+
+###  http://ex.org/Spearman
+:Spearman rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Feudal_Age ;
+          :created_in :Barracks ;
+          :expansion :Age_Of_Kings ;
+          :upgrades_to :Pikeman ;
+          :armor _:genid261 ;
+          :attack 3 ;
+          :attack_delay 0 ;
+          :bonus _:genid262 ;
+          :build_time 22 ;
+          :cost _:genid263 ;
+          :description "Medium infantry" ;
+          :hit_points 45 ;
+          :line_of_sight 4 ;
+          :movement_rate "1.0"^^xsd:float ;
+          :name "Spearman" ;
+          :range 0 .
+
+_:genid261 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid262 :bonus_buildings "1.0"^^xsd:float ;
+            :bonus_camels "7.0"^^xsd:float ;
+            :bonus_cavalry "15.0"^^xsd:float ;
+            :bonus_eagles "1.0"^^xsd:float ;
+            :bonus_ships "7.0"^^xsd:float ;
+            :bonus_war_elephants "30.0"^^xsd:float .
+
+_:genid263 :food "35.0"^^xsd:float ;
+            :wood "15.0"^^xsd:float .
+
+
+###  http://ex.org/Stable
+:Stable rdf:type owl:NamedIndividual ,
+                 :Building ,
+                 owl:Thing .
+
+
+###  http://ex.org/Tarkan
+:Tarkan rdf:type owl:NamedIndividual ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Castle_Age ;
+        :created_in :Castle ;
+        :expansion :The_Conquerors ;
+        :upgrades_to :Elite_Tarkan ;
+        :armor _:genid264 ;
+        :attack 7 ;
+        :attack_delay 0 ;
+        :bonus _:genid265 ;
+        :build_time 14 ;
+        :cost _:genid266 ;
+        :description "Hun unique unit. Cavalry with attack bonus vs. buildings. (Attack bonuses stack - for example +16 against a palisade wall (8 buildings + 8 walls))" ;
+        :hit_points 90 ;
+        :line_of_sight 5 ;
+        :movement_rate "1.35"^^xsd:float ;
+        :name "Tarkan" ;
+        :range 0 .
+
+_:genid264 :melee_armor 1 ;
+            :pierce_armor 2 .
+
+_:genid265 :bonus_buildings "8.0"^^xsd:float ;
+            :bonus_castle "10.0"^^xsd:float ;
+            :bonus_stone_defense "12.0"^^xsd:float ;
+            :bonus_walls_and_gates "8.0"^^xsd:float .
+
+_:genid266 :food "60.0"^^xsd:float ;
+            :gold "60.0"^^xsd:float .
+
+
+###  http://ex.org/Teutonic_Knight
+:Teutonic_Knight rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Castle_Age ;
+                 :created_in :Castle ;
+                 :expansion :Age_Of_Kings ;
+                 :upgrades_to :Elite_Teutonic_Knight ;
+                 :armor _:genid267 ;
+                 :attack 12 ;
+                 :attack_delay 0 ;
+                 :bonus _:genid268 ;
+                 :build_time 12 ;
+                 :cost _:genid269 ;
+                 :description "Teutonic unique unit. Infantry with effective armor and slow but powerful attack" ;
+                 :hit_points 70 ;
+                 :line_of_sight 3 ;
+                 :movement_rate "0.65"^^xsd:float ;
+                 :name "Teutonic_Knight" ;
+                 :range 0 .
+
+_:genid267 :melee_armor 5 ;
+            :pierce_armor 2 .
+
+_:genid268 :bonus_buildings "4.0"^^xsd:float ;
+            :bonus_eagles "4.0"^^xsd:float .
+
+_:genid269 :food "85.0"^^xsd:float ;
+            :gold "40.0"^^xsd:float .
+
+
+###  http://ex.org/The_Conquerors
+:The_Conquerors rdf:type owl:NamedIndividual ,
+                         :Expansion ,
+                         owl:Thing .
+
+
+###  http://ex.org/Throwing_Axeman
+:Throwing_Axeman rdf:type owl:NamedIndividual ,
+                          :Unit ,
+                          owl:Thing ;
+                 :age :Castle_Age ;
+                 :created_in :Castle ;
+                 :expansion :Age_Of_Kings ;
+                 :upgrades_to :Elite_Throwing_Axeman ;
+                 :armor _:genid270 ;
+                 :attack 7 ;
+                 :attack_delay "1.2"^^xsd:float ;
+                 :bonus _:genid271 ;
+                 :build_time 17 ;
+                 :cost _:genid272 ;
+                 :description "Frankish unique unit. Infantry with ranged attack" ;
+                 :hit_points 50 ;
+                 :line_of_sight 5 ;
+                 :movement_rate "0.9"^^xsd:float ;
+                 :name "Throwing_Axeman" ;
+                 :range 3 .
+
+_:genid270 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid271 :bonus_buildings "1.0"^^xsd:float ;
+            :bonus_eagles "1.0"^^xsd:float .
+
+_:genid272 :food "55.0"^^xsd:float ;
+            :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Town_Center
+:Town_Center rdf:type owl:NamedIndividual ,
+                      :Building ,
+                      owl:Thing .
+
+
+###  http://ex.org/Trade_Cart
+:Trade_Cart rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Feudal_Age ;
+            :created_in :Market ;
+            :expansion :Age_Of_Kings ;
+            :armor _:genid273 ;
+            :attack 0 ;
+            :attack_delay 0 ;
+            :bonus [ ] ;
+:build_time 50 ;
+:cost _:genid275 ;
+:description "Used to trade with other players by land. Carries goods from your Market to another player's Market and brings back gold. The farther the Market the higher your profit" ;
+:hit_points 70 ;
+:line_of_sight 7 ;
+:movement_rate "1.0"^^xsd:float ;
+:name "Trade_Cart" ;
+:range 0 .
+
+_:genid273 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid275 :gold "50.0"^^xsd:float ;
+            :wood "100.0"^^xsd:float .
+
+
+###  http://ex.org/Trade_Cog
+:Trade_Cog rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Feudal_Age ;
+           :created_in :Dock ;
+           :expansion :Age_Of_Kings ;
+           :armor _:genid276 ;
+           :attack 0 ;
+           :attack_delay 0 ;
+           :bonus [ ] ;
+:build_time 36 ;
+:cost _:genid278 ;
+:description "Movement rate 2.00 with caravan" ;
+:hit_points 80 ;
+:line_of_sight 6 ;
+:movement_rate "1.32"^^xsd:float ;
+:name "Trade_Cog" ;
+:range 0 .
+
+_:genid276 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid278 :gold "50.0"^^xsd:float ;
+            :wood "100.0"^^xsd:float .
+
+
+###  http://ex.org/Transport_Ship
+:Transport_Ship rdf:type owl:NamedIndividual ,
+                         :Unit ,
+                         owl:Thing ;
+                :age :Feudal_Age ;
+                :created_in :Dock ;
+                :expansion :Age_Of_Kings ;
+                :armor _:genid279 ;
+                :attack 0 ;
+                :attack_delay 0 ;
+                :bonus [ ] ;
+:build_time 45 ;
+:cost [ :wood "125.0"^^xsd:float
+      ] ;
+:description "Ship to carry units. Garrison inside 5 (10 with careening and 20 with dry dock)" ;
+:hit_points 100 ;
+:line_of_sight 5 ;
+:movement_rate "1.45"^^xsd:float ;
+:name "Transport_Ship" ;
+:range 0 .
+
+_:genid279 :melee_armor 4 ;
+            :pierce_armor 8 .
+
+
+###  http://ex.org/Trebuchet
+:Trebuchet rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Imperial_Age ;
+           :created_in :Castle ;
+           :expansion :Age_Of_Kings ;
+           :accuracy "15.0"^^xsd:float ;
+           :armor _:genid282 ;
+           :attack 200 ;
+           :attack_delay "0.6"^^xsd:float ;
+           :bonus [ :bonus_buildings "250.0"^^xsd:float
+                  ] ;
+           :build_time 50 ;
+           :cost _:genid284 ;
+           :description "Powerful siege weapon used to destroy buildings and walls from long distance. Cannot fire on close units. Must be packed to move and unpacked to attack. Can cut paths through forests. Unpack time: 0:11" ;
+           :hit_points 150 ;
+           :line_of_sight 18 ;
+           :minimum_range 4 ;
+           :movement_rate 0 ;
+           :name "Trebuchet" ;
+           :range 16 .
+
+_:genid282 :melee_armor 1 ;
+            :pierce_armor 150 .
+
+_:genid284 :gold "200.0"^^xsd:float ;
+            :wood "200.0"^^xsd:float .
+
+
+###  http://ex.org/Turkey
+:Turkey rdf:type owl:NamedIndividual ,
+                 :Animal ,
+                 :Unit ,
+                 owl:Thing ;
+        :age :Dark_Age ;
+        :created_in :Gaia ;
+        :expansion :The_Conquerors ;
+        :armor _:genid285 ;
+        :attack 0 ;
+        :attack_delay 0 ;
+        :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Alternative to sheep" ;
+:hit_points 7 ;
+:line_of_sight 3 ;
+:movement_rate "0.7"^^xsd:float ;
+:name "Turkey" ;
+:range 0 .
+
+_:genid285 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Turtle_Ship
+:Turtle_Ship rdf:type owl:NamedIndividual ,
+                      :Unit ,
+                      owl:Thing ;
+             :age :Castle_Age ;
+             :created_in :Dock ;
+             :expansion :The_Conquerors ;
+             :upgrades_to :Elite_Turtle_Ship ;
+             :armor _:genid288 ;
+             :attack 50 ;
+             :attack_delay 0 ;
+             :blast_radius "0.5"^^xsd:float ;
+             :bonus [ ] ;
+:build_time 50 ;
+:cost _:genid290 ;
+:description "Korean unique unit. Slow and ironclad battleship used to destroy other ships at close range" ;
+:hit_points 200 ;
+:line_of_sight 8 ;
+:movement_rate "0.9"^^xsd:float ;
+:name "Turtle_Ship" ;
+:range 6 .
+
+_:genid288 :melee_armor 6 ;
+            :pierce_armor 5 .
+
+_:genid290 :gold "200.0"^^xsd:float ;
+            :wood "200.0"^^xsd:float .
+
+
+###  http://ex.org/Two-Handed_Swordsman
+:Two-Handed_Swordsman rdf:type owl:NamedIndividual ,
+                               :Unit ,
+                               owl:Thing ;
+                      :age :Imperial_Age ;
+                      :created_in :Barracks ;
+                      :expansion :Age_Of_Kings ;
+                      :upgraded_from :Long_Swordsman ;
+                      :upgrades_to :Champion ;
+                      :armor _:genid291 ;
+                      :attack 11 ;
+                      :attack_delay 0 ;
+                      :bonus _:genid292 ;
+                      :build_time 21 ;
+                      :cost _:genid293 ;
+                      :description "Upgraded Long Swordsman. Attack bonus vs. buildings" ;
+                      :hit_points 60 ;
+                      :line_of_sight 5 ;
+                      :movement_rate "0.9"^^xsd:float ;
+                      :name "Two-Handed_Swordsman" ;
+                      :range 0 .
+
+_:genid291 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid292 :bonus_buildings "3.0"^^xsd:float ;
+            :bonus_eagles "6.0"^^xsd:float .
+
+_:genid293 :food "60.0"^^xsd:float ;
+            :gold "20.0"^^xsd:float .
+
+
+###  http://ex.org/Villager
+:Villager rdf:type owl:NamedIndividual ,
+                   :Unit ,
+                   owl:Thing ;
+          :age :Dark_Age ;
+          :created_in :Town_Center ;
+          :expansion :Age_Of_Kings ;
+          :armor _:genid294 ;
+          :attack 3 ;
+          :attack_delay 0 ;
+          :bonus _:genid295 ;
+          :build_time 25 ;
+          :cost [ :food "50.0"^^xsd:float
+                ] ;
+          :description "Gathers resources. Builds and repairs buildings. Also repairs ships and siege weapons" ;
+          :hit_points 25 ;
+          :line_of_sight 4 ;
+          :movement_rate "0.8"^^xsd:float ;
+          :name "Villager" ;
+          :range 0 .
+
+_:genid294 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+_:genid295 :bonus_buildings "3.0"^^xsd:float ;
+            :bonus_stone_defense "6.0"^^xsd:float .
+
+
+###  http://ex.org/War_Elephant
+:War_Elephant rdf:type owl:NamedIndividual ,
+                       :Unit ,
+                       owl:Thing ;
+              :age :Castle_Age ;
+              :created_in :Castle ;
+              :expansion :Age_Of_Kings ;
+              :upgrades_to :Elite_War_Elephant ;
+              :armor _:genid297 ;
+              :attack 15 ;
+              :attack_delay 0 ;
+              :bonus _:genid298 ;
+              :build_time 31 ;
+              :cost _:genid299 ;
+              :description "Persian unique unit. Slow powerful strong and well-armored cavalry" ;
+              :hit_points 450 ;
+              :line_of_sight 4 ;
+              :movement_rate "0.6"^^xsd:float ;
+              :name "War_Elephant" ;
+              :range 0 .
+
+_:genid297 :melee_armor 1 ;
+            :pierce_armor 2 .
+
+_:genid298 :bonus_buildings "7.0"^^xsd:float ;
+            :bonus_stone_defense "7.0"^^xsd:float .
+
+_:genid299 :food "200.0"^^xsd:float ;
+            :gold "75.0"^^xsd:float .
+
+
+###  http://ex.org/War_Galley
+:War_Galley rdf:type owl:NamedIndividual ,
+                     :Unit ,
+                     owl:Thing ;
+            :age :Castle_Age ;
+            :created_in :Dock ;
+            :expansion :Age_Of_Kings ;
+            :upgraded_from :Galley ;
+            :upgrades_to :Galleon ;
+            :armor _:genid300 ;
+            :attack 7 ;
+            :attack_delay 0 ;
+            :bonus _:genid301 ;
+            :build_time 36 ;
+            :cost _:genid302 ;
+            :description "Upgraded Galley" ;
+            :hit_points 135 ;
+            :line_of_sight 8 ;
+            :movement_rate "1.43"^^xsd:float ;
+            :name "War_Galley" ;
+            :range 6 .
+
+_:genid300 :melee_armor 0 ;
+            :pierce_armor 6 .
+
+_:genid301 :bonus_buildings "7.0"^^xsd:float ;
+            :bonus_camels "9.0"^^xsd:float ;
+            :bonus_rams "4.0"^^xsd:float ;
+            :bonus_ships "9.0"^^xsd:float .
+
+_:genid302 :gold "30.0"^^xsd:float ;
+            :wood "90.0"^^xsd:float .
+
+
+###  http://ex.org/War_Wagon
+:War_Wagon rdf:type owl:NamedIndividual ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Castle_Age ;
+           :created_in :Castle ;
+           :expansion :The_Conquerors ;
+           :upgrades_to :Elite_War_Wagon ;
+           :accuracy "10.0"^^xsd:float ;
+           :armor _:genid303 ;
+           :attack 9 ;
+           :attack_delay "1.0"^^xsd:float ;
+           :bonus [ :bonus_buildings "5.0"^^xsd:float
+                  ] ;
+           :build_time 25 ;
+           :cost _:genid305 ;
+           :description "Korean unique unit. Heavily armored horse-drawn archery unit" ;
+           :hit_points 150 ;
+           :line_of_sight 6 ;
+           :movement_rate "1.2"^^xsd:float ;
+           :name "War_Wagon" ;
+           :range 4 .
+
+_:genid303 :melee_armor 0 ;
+            :pierce_armor 3 .
+
+_:genid305 :gold "60.0"^^xsd:float ;
+            :wood "120.0"^^xsd:float .
+
+
+###  http://ex.org/Wild_Boar
+:Wild_Boar rdf:type owl:NamedIndividual ,
+                    :Animal ,
+                    :Unit ,
+                    owl:Thing ;
+           :age :Dark_Age ;
+           :created_in :Gaia ;
+           :expansion :Age_Of_Kings ;
+           :armor _:genid306 ;
+           :attack 7 ;
+           :attack_delay 0 ;
+           :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Wild boar" ;
+:hit_points 75 ;
+:line_of_sight 4 ;
+:movement_rate "0.96"^^xsd:float ;
+:name "Wild_Boar" ;
+:range 0 .
+
+_:genid306 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Woad_Raider
+:Woad_Raider rdf:type owl:NamedIndividual ,
+                      :Unit ,
+                      owl:Thing ;
+             :age :Castle_Age ;
+             :created_in :Castle ;
+             :expansion :Age_Of_Kings ;
+             :upgrades_to :Elite_Woad_Raider ;
+             :armor _:genid309 ;
+             :attack 8 ;
+             :attack_delay 0 ;
+             :bonus _:genid310 ;
+             :build_time 10 ;
+             :cost _:genid311 ;
+             :description "Celtic unique unit. Exceptionally quick infantry. Attack bonus vs. buildings" ;
+             :hit_points 65 ;
+             :line_of_sight 3 ;
+             :movement_rate "1.38"^^xsd:float ;
+             :name "Woad_Raider" ;
+             :range 0 .
+
+_:genid309 :melee_armor 0 ;
+            :pierce_armor 1 .
+
+_:genid310 :bonus_buildings "2.0"^^xsd:float ;
+            :bonus_eagles "2.0"^^xsd:float .
+
+_:genid311 :food "65.0"^^xsd:float ;
+            :gold "25.0"^^xsd:float .
+
+
+###  http://ex.org/Wolf
+:Wolf rdf:type owl:NamedIndividual ,
+               :Animal ,
+               :Unit ,
+               owl:Thing ;
+      :age :Dark_Age ;
+      :created_in :Gaia ;
+      :expansion :Age_Of_Kings ;
+      :armor _:genid312 ;
+      :attack 3 ;
+      :attack_delay 0 ;
+      :bonus [ ] ;
+:build_time 0 ;
+:cost [ ] ;
+:description "Wild wolf. Gives no food just kills people. Line of sight also depends on difficulty (4-12 LOS)" ;
+:hit_points 25 ;
+:line_of_sight 12 ;
+:movement_rate "1.05"^^xsd:float ;
+:name "Wolf" ;
+:range 0 .
+
+_:genid312 :melee_armor 0 ;
+            :pierce_armor 0 .
+
+
+###  http://ex.org/Trebuchet_(packed)
+<http://ex.org/Trebuchet_(packed)> rdf:type owl:NamedIndividual ,
+                                            :Unit ,
+                                            owl:Thing ;
+                                   :age :Imperial_Age ;
+                                   :created_in :Castle ;
+                                   :expansion :Age_Of_Kings ;
+                                   :accuracy "15.0"^^xsd:float ;
+                                   :armor _:genid315 ;
+                                   :attack 0 ;
+                                   :attack_delay 0 ;
+                                   :bonus [ :bonus_buildings "250.0"^^xsd:float
+                                          ] ;
+                                   :build_time 50 ;
+                                   :cost _:genid317 ;
+                                   :description "Powerful siege weapon used to destroy buildings and walls from long distance. Cannot fire on close units. Must be packed to move and unpacked to attack. Can cut paths through forests. Unpack time: 0:11" ;
+                                   :hit_points 150 ;
+                                   :line_of_sight 18 ;
+                                   :movement_rate "0.8"^^xsd:float ;
+                                   :name "Trebuchet_(packed)" ;
+                                   :range 0 .
+
+_:genid315 :melee_armor 2 ;
+            :pierce_armor 8 .
+
+_:genid317 :gold "200.0"^^xsd:float ;
+            :wood "200.0"^^xsd:float .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:Restriction ;
+  owl:onProperty :created_in ;
+  owl:hasValue :Gaia ;
+  rdfs:subClassOf :Animal
+] .
+
+
+###  Generated by the OWL API (version 5.1.7.2018-09-02T11:51:43Z) https://github.com/owlcs/owlapi/
